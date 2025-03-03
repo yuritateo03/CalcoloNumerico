@@ -1,0 +1,7 @@
+# Ignora tutti i file Excalidraw
+*.excalidraw
+*.excalidraw.md
+*.excalidraw.json
+
+# Ignora la cartella .obsidian
+.obsidian/
