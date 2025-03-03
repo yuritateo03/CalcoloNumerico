@@ -1,6 +1,6 @@
 In questa parte di programma ci concentreremo sulla risoluzione di un problema specifico. Data una certa funzione $f: [a, b] \rightarrow R$, continua nel suo dominio, bisogna calcolare un certo valore $α ∈ [a, b]$ tale che $f(α) = 0$. Graficamente, questo equivale a cercare un punto di intersezione del grafico di $f$ con l'asse delle $x$.
 
- ![1](Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.27.59.excalidraw.svg)
+ ![Immagine 1](Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.27.59.excalidraw.svg)
 
 Questo è un problema di fondamentale importanza in molte applicazioni pratiche, ad esempio in economia, ingegneria, fisica, biologia e così via. Nonostante ciò, raramente è possibile calcolare esattamente le soluzioni di un'equazione non lineare di questo tipo. In genere, ci si deve accontentare di un'approssimazione della soluzione, ottenuta mediante metodi numerici che vedremo prossimamente. Altre volte un'espressione esatta esiste, invece, ma è troppo complessa da calcolare per cui si preferisce approssimarla numericamente. Un esempio tipico di equazione la cui soluzione non è esprimibile in forma chiusa è un'equazione trascendente mista, ad esempio $x - cos(x) = 0$.
 ### Teorema degli zeri
