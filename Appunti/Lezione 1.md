@@ -28,7 +28,7 @@ Facciamo un esempio. Assumiamo che il punto medio di $[a, b]$ sia un certo $x_0$
 
 Si continua questo processo iterativamente, dimezzando ogni volta la lunghezza dell'intervallo, finché non si ottiene un intervallo talmente piccolo da avere un punto medio che fornisca una buona approssimazione della soluzione dell'equazione.
 
-![Immagine 3](25-03_22-26-0425-03.excalidraw.svg)
+![Immagine 3](Excalidraw/25-03_22-26-0425-03.excalidraw.svg)
 ### Descrizione del metodo mediante algoritmo
 Dati $f$, $a$, $b$ che verifichino le ipotesi del teorema degli zeri, si pone:
 
@@ -59,21 +59,21 @@ Per questo motivo, bisogna trovare un altro modo per decidere quando fermare l'a
 ### Errore e residuo
 Siano $α, \dot α ∈ R$, con $\dot α$ che rappresenta un'approssimazione di $α$. Definiamo le quantità *Errore Assoluto* e *Errore relativo* dell'approssimazione le quantità:
 
-![Immagine 4](25-03_23-11-5625-03.excalidraw.svg)
+![Immagine 4](Excalidraw/25-03_23-11-5625-03.excalidraw.svg)
 
 La qualità dell'approssimazione è tanto migliore quanto è più piccolo l'errore. Generalmente è preferibile utilizzare l'errore relativo, in quanto tiene conto anche dell'ordine di grandezza dei numeri coinvolti, al contrario dell'errore assoluto.
 
 Chiaramente, non abbiamo a disposizione il valore di $α$, di conseguenza non possiamo calcolare direttamente queste quantità. Possiamo, però, calcolare il numero di passi minimi necessari per raggiungere un determinato valore di tolleranza sull'errore assoluto. Consideriamo le tre successioni generate dal metodo delle successive bisezioni. Mediante una rappresentazione grafica degli intervalli, possiamo notare che:
 
-![Immagine 5](25-03_23-18-1725-03.excalidraw.svg)
+![Immagine 5](Excalidraw/25-03_23-18-1725-03.excalidraw.svg)
 
 Supponiamo di voler determinare il più piccolo valore di $k$ tale che l'errore assoluto sia minore di un certo ε, che definiremo come tolleranza sull'errore assoluto. Vedendo la formula di sopra, basterà scegliere il più piccolo intero $k$ tale che
 
-![Immagine 6](25-03_23-23-5425-03.excalidraw.svg)
+![Immagine 6](Excalidraw/25-03_23-23-5425-03.excalidraw.svg)
 
 Relativamente al problema di calcolare lo zero di una funzione $f$, definiamo come *residuo dell'approssimazione $\dot α$* la quantità $f(\dot α)$. Indica quanto il valore della funzione calcolata a $\dot α$ sia lontano da 0. Il residuo non è sempre un buon indicatore dell'errore assoluto, ma può sovrastimarlo o sottostimarlo in base alla pendenza della curva della funzione considerata. Se l'approssimazione è sufficientemente vicina ad $α$, si ha che
 
-![Immagine 7](25-03_23-28-4825-03.excalidraw.svg)
+![Immagine 7](Excalidraw/25-03_23-28-4825-03.excalidraw.svg)
 
 Il valore assoluto del residuo sovrastima l'errore assoluto quando la derivata di $f$ in $α$ è grande, mentre lo sottostima quando è piccola. È quindi sconsigliato usare il residuo come criterio di arresto, a meno che non si abbiano informazioni a priori sulla grandezza della derivata di $f$ in un intorno della soluzione.
 
