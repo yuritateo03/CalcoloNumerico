@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ea56173ee83d02b3",
+        "id": "baa5fbfeb886f706",
         "type": "tabs",
         "children": [
           {
-            "id": "29ef78d448b3560a",
+            "id": "ce586239dcb70340",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
+                "file": "Appunti/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
                 "mode": "source",
                 "source": false
               },
@@ -166,11 +166,24 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e57be6b0a9660ef4",
+  "active": "ce586239dcb70340",
   "lastOpenFiles": [
-    "Excalidraw/Immagine2.svg",
-    "Excalidraw/Immagine1.svg",
-    "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
+    "Appunti/Excalidraw/25-03_22-01-5325-03.excalidraw.md",
+    "Appunti/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
+    "Appunti/Excalidraw/25-03_22-01-5325-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_22-01-2325-03.excalidraw.md",
+    "Appunti/Excalidraw/25-03_22-01-2325-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_22-00-5225-03.excalidraw.md",
+    "Appunti/Excalidraw/25-03_22-00-5225-03.excalidraw.svg",
+    "Appunti/Excalidraw/Template.excalidraw.svg",
+    "Appunti/Excalidraw/Template.excalidraw.md",
+    "Appunti/Excalidraw/Immagine2.svg",
+    "Appunti/Excalidraw/Immagine1.svg",
+    "Appunti/Excalidraw/Untitled.md",
+    "Excalidraw/25-03_21-59-0225-03.excalidraw.md",
+    "Excalidraw/25-03_21-59-0225-03.excalidraw.svg",
+    "Excalidraw",
+    "Appunti",
     "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.27.59.excalidraw.md",
     "Metodi.md",
     "Nuovo Documento di testo.txt",
@@ -188,6 +201,6 @@
     "Excalidraw/Drawing 2025-03-03 19.12.32.excalidraw.md",
     "Excalidraw/Drawing 2025-03-03 19.12.51.excalidraw.md",
     "Excalidraw/Drawing 2025-03-03 19.10.11.excalidraw.md",
-    "Excalidraw"
+    "Appunti/Excalidraw"
   ]
 }

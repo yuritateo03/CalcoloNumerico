@@ -1,9 +1,9 @@
 {
-  "folder": "Excalidraw",
+  "folder": "Appunti/Excalidraw",
   "cropFolder": "",
   "annotateFolder": "",
   "embedUseExcalidrawFolder": false,
-  "templateFilePath": "Excalidraw/Template.md",
+  "templateFilePath": "Appunti/Excalidraw/Template.excalidraw",
   "scriptFolderPath": "Excalidraw/Scripts",
   "fontAssetsPath": "Excalidraw/CJK Fonts",
   "loadChineseFonts": false,
