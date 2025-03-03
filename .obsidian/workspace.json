@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
+                "file": "Appunti/Lezione 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metodi numerici per la risoluzione delle equazioni non-lineari"
+              "title": "Lezione 1"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "69edc7251a0f6dde",
@@ -168,27 +169,34 @@
   },
   "active": "ce586239dcb70340",
   "lastOpenFiles": [
+    "Appunti/Excalidraw/25-03_22-26-0425-03.excalidraw.md",
+    "Appunti/Lezione 1.md",
+    "Appunti/Excalidraw/25-03_23-28-4825-03.excalidraw.md",
+    "Appunti/Excalidraw/25-03_23-28-4825-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_22-26-0425-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_23-23-5425-03.excalidraw.md",
+    "Appunti/Excalidraw/25-03_23-23-5425-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_23-18-1725-03.excalidraw.md",
+    "Appunti/Excalidraw/25-03_23-18-1725-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_23-11-5625-03.excalidraw.svg",
+    "Appunti/Excalidraw/25-03_23-11-5625-03.excalidraw.md",
+    "Appunti/Excalidraw/Template.excalidraw.svg",
+    "Appunti/Excalidraw/Immagine1.svg",
+    "Appunti/Excalidraw/Immagine2.svg",
+    "Appunti/Excalidraw/Template.excalidraw.md",
     "Appunti/Excalidraw/25-03_22-01-5325-03.excalidraw.md",
-    "Appunti/Metodi numerici per la risoluzione delle equazioni non-lineari.md",
     "Appunti/Excalidraw/25-03_22-01-5325-03.excalidraw.svg",
     "Appunti/Excalidraw/25-03_22-01-2325-03.excalidraw.md",
     "Appunti/Excalidraw/25-03_22-01-2325-03.excalidraw.svg",
     "Appunti/Excalidraw/25-03_22-00-5225-03.excalidraw.md",
-    "Appunti/Excalidraw/25-03_22-00-5225-03.excalidraw.svg",
-    "Appunti/Excalidraw/Template.excalidraw.svg",
-    "Appunti/Excalidraw/Template.excalidraw.md",
-    "Appunti/Excalidraw/Immagine2.svg",
-    "Appunti/Excalidraw/Immagine1.svg",
     "Appunti/Excalidraw/Untitled.md",
     "Excalidraw/25-03_21-59-0225-03.excalidraw.md",
-    "Excalidraw/25-03_21-59-0225-03.excalidraw.svg",
     "Excalidraw",
     "Appunti",
     "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.27.59.excalidraw.md",
     "Metodi.md",
     "Nuovo Documento di testo.txt",
     "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 21.00.26.excalidraw.md",
-    "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.27.59.excalidraw.png",
     "Excalidraw/Metodi numerici per la risoluzione delle equazioni non-lineari 2025-03-03 20.26.47.excalidraw.md",
     "Excalidraw/Template.md",
     "Untitled.canvas",
@@ -200,7 +208,6 @@
     "Excalidraw/Drawing 2025-03-03 19.13.18.excalidraw.md",
     "Excalidraw/Drawing 2025-03-03 19.12.32.excalidraw.md",
     "Excalidraw/Drawing 2025-03-03 19.12.51.excalidraw.md",
-    "Excalidraw/Drawing 2025-03-03 19.10.11.excalidraw.md",
     "Appunti/Excalidraw"
   ]
 }
