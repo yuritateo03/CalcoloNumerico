@@ -1,6 +1,4 @@
-# Metodi numerici per la risoluzione delle equazioni non-lineari
-
-[Torna all'indice](../README.md)
+# Metodi numerici per la risoluzione delle equazioni non-lineari - [Torna all'indice](../README.md)
 
 In questa parte di programma ci concentreremo sulla risoluzione di un problema specifico. Data una certa funzione $f: [a, b] \rightarrow R$, continua nel suo dominio, bisogna calcolare un certo valore $α ∈ [a, b]$ tale che $f(α) = 0$. Graficamente, questo equivale a cercare un punto di intersezione del grafico di $f$ con l'asse delle $x$.
 
@@ -84,4 +82,6 @@ Se l'approssimazione è sufficientemente vicina ad $α$, si ha che
 ![Immagine 8](Excalidraw/25-03_23-28-4825-03.excalidraw.svg)
 
 Il valore assoluto del residuo sovrastima l'errore assoluto quando la derivata di $f$ in $α$ è grande, mentre lo sottostima quando è piccola. È quindi sconsigliato usare il residuo come criterio di arresto, a meno che non si abbiano informazioni a priori sulla grandezza della derivata di $f$ in un intorno della soluzione.
+
+### [Torna all'indice](../README.md)
 
