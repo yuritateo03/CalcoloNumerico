@@ -1,4 +1,4 @@
-# Ignora tutti i file Excalidraw
+# Ignora tutti i file Excalidraw (.svg esclusi)
 *.excalidraw
 *.excalidraw.md
 *.excalidraw.json
