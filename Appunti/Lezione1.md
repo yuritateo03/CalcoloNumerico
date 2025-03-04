@@ -71,9 +71,15 @@ Supponiamo di voler determinare il più piccolo valore di $k$ tale che l'errore 
 
 ![Immagine 6](Excalidraw/25-03_23-23-5425-03.excalidraw.svg)
 
-Relativamente al problema di calcolare lo zero di una funzione $f$, definiamo come *residuo dell'approssimazione $\dot α$* la quantità $f(\dot α)$. Indica quanto il valore della funzione calcolata a $\dot α$ sia lontano da 0. Il residuo non è sempre un buon indicatore dell'errore assoluto, ma può sovrastimarlo o sottostimarlo in base alla pendenza della curva della funzione considerata. Se l'approssimazione è sufficientemente vicina ad $α$, si ha che
+Relativamente al problema di calcolare lo zero di una funzione $f$, definiamo come *residuo dell'approssimazione* $\dot α$ la quantità $f(\dot α)$. Indica quanto il valore della funzione calcolata a $\dot α$ sia lontano da 0. Il residuo non è sempre un buon indicatore dell'errore assoluto, ma può sovrastimarlo o sottostimarlo in base alla pendenza della curva della funzione considerata. 
 
-![Immagine 7](Excalidraw/25-03_23-28-4825-03.excalidraw.svg)
+![Immagine 7](Excalidraw/2025-03-04_10.27.33.excalidraw.svg)
+
+In questo esempio possiamo notare che, nonostante l'errore assoluto sia lo stesso in entrambi i grafici, il residuo è considerevolmente maggiore nel secondo grafico siccome la curva del grafico ha una pendenza maggiore. Il residuo dipende quindi anche dalla pendenza della curva e, di conseguenza, deve avere un qualche collegamento con la derivata della funzione.
+
+Se l'approssimazione è sufficientemente vicina ad $α$, si ha che
+
+![Immagine 8](Excalidraw/25-03_23-28-4825-03.excalidraw.svg)
 
 Il valore assoluto del residuo sovrastima l'errore assoluto quando la derivata di $f$ in $α$ è grande, mentre lo sottostima quando è piccola. È quindi sconsigliato usare il residuo come criterio di arresto, a meno che non si abbiano informazioni a priori sulla grandezza della derivata di $f$ in un intorno della soluzione.
 
