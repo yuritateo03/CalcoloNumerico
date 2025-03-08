@@ -56,7 +56,7 @@ L'algoritmo si ferma in un numero finito di passi soltanto se si ha $f(x^{(k)}) 
 La probabilità che si realizzi il punto 1 dell'algoritmo, e quindi che l'algoritmo abbia un numero finito di passi, è trascurabile e, nella pratica, rende superfluo il controllo.
 
 Per questo motivo, bisogna trovare un altro modo per decidere quando fermare l'algoritmo. Ci vogliamo fermare quando la nostra approssimazione è molto vicina alla soluzione. A questo scopo, definiamo i concetti di errore e residuo.
-### Errore e residuo
+## Errore e residuo
 Siano $α, \dot α ∈ R$, con $\dot α$ che rappresenta un'approssimazione di $α$. Definiamo le quantità *Errore Assoluto* e *Errore relativo* dell'approssimazione le quantità:
 
 ![Immagine 4](Excalidraw/25-03_23-11-5625-03.excalidraw.svg)
