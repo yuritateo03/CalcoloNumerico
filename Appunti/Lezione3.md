@@ -44,11 +44,11 @@ Senza perdita di generalità, supponiamo che $f(a) > 0$ (il caso $f(b) > 0$ è a
 
 Da questo possiamo dedurre che, se $|f|$ è sufficientemente grande sia in $a$ che in $b$, allora $f$ e $\overline f$ hanno lo stesso segno agli estremi di $[a, b]$, e di conseguenza anche $\overline f$ avrà uno zero in quell'intervallo. Se, però, una delle due condizioni non è rispettata, allora i segni di $f$ e $\overline f$ potrebbero non coincidere e di conseguenza $\overline f$ potrebbe non avere zeri in $[a, b]$. In conclusione, se $|f(x)| < ε$, non possiamo concludere informazioni certe sul segno di $\overline f$ e viceversa. In questi casi diremo che $f$ è *dominata dall'errore*.
 
-![Immagine 4](2025-03-14_00.15.57.excalidraw.svg)
+![Immagine 4](Excalidraw/2025-03-14_00.15.57.excalidraw.svg)
 
 Il più grande intervallo $I$ contenente $α$ e tale che $|f(x)| \leq ε$, per ogni $x ∈ I$, è detto **intervallo di incertezza** per lo zero $α$. Fissato $ε > 0$, il problema di calcolare lo zero $α$ è tanto più mal condizionato quanto più lungo è l'intervallo $I$.
 
-![Immagine 5](2025-03-14_00.23.53.excalidraw.svg)
+![Immagine 5](Excalidraw/2025-03-14_00.23.53.excalidraw.svg)
 
 L'obiettivo realistico di un metodo numerico è fornire un'approssimazione di $α$ che sia all'interno dell'intervallo di incertezza. 
 
