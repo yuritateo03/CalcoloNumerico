@@ -55,4 +55,5 @@ Notiamo come l'algoritmo si basi esclusivamente sul segno di $f$ calcolata agli 
 
 ![Immagine 4](Excalidraw/2025-03-08_14.45.57.excalidraw.svg)
 
+### [Lezione successiva](Lezione3.md)
 ### [Torna all'indice](../README.md)

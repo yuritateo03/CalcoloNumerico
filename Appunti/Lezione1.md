@@ -1,4 +1,4 @@
-# Successive bisezioni, errore e residuo
+# Metodo delle successive bisezioni, errore e residuo
 
 In questa parte di programma ci concentreremo sulla risoluzione di un problema specifico. Data una certa funzione $f: [a, b] \rightarrow R$, continua nel suo dominio, bisogna calcolare un certo valore $α ∈ [a, b]$ tale che $f(α) = 0$. Graficamente, questo equivale a cercare un punto di intersezione del grafico di $f$ con l'asse delle $x$.
 
