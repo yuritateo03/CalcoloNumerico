@@ -67,4 +67,69 @@ Questo discorso vale soltanto con l'ipotesi che $f'(α) \neq 0$. Se, invece, dov
 Siano $f$ derivabile e $α$ uno zero per $f$. Si dice che $α$ è uno **zero semplice** di $f$ se $f'(α) \neq 0$. Geometricamente, uno zero per $f$ è semplice se la tangente al grafico di $f$ in $α$ non è parallela all'asse delle ascisse.
 
 ### Ordine di convergenza
+Passiamo ora a un altro problema legato al calcolo degli zeri di funzione, ovvero quantificare la velocità alla quale la successione generata da un metodo iterativo converge alla soluzione.
+
+Sia $\{x^{(k)}\}_{k ∈ N}$ una successione di numeri reali convergente a un certo $α$. Nel nostro caso, considereremo la successione generata dal metodo e $α$ sarà lo zero di funzione. Diremo che $x^{(k)} \rightarrow α$ con ordine di convergenza $p \geq 1$ se esiste una costante $0 < c < \infty$ tale che
+
+![Immagine 7](Excalidraw/2025-03-14_22.46.13.excalidraw.svg)
+
+In questo caso, $c$ è detto fattore asintotico di convergenza. Il fattore $p$, ovvero l'ordine di convergenza, indicherà quanto velocemente la nostra successione si sta avvicinando al valore della radice e, di conseguenza, quanto velocemente il metodo che genera quella serie è in grado di avvicinarsi al valore dello zero della funzione.
+
+La formula è essenzialmente il rapporto di due errori assoluti, ovvero gli errori assoluti calcolati con due iterazioni successive del metodo. L'idea è cercare di quantificare il fattore $p$ che separa l'iterazione corrente dall'iterazione successiva. Quanto più grande è questo fattore $p$, tanto più velocemente il metodo si avvicina allo zero della funzione. L'ordine di convergenza $p$ è quindi quello che ci interessa maggiormente, per gli esercizi che faremo $c$ è poco rilevante e serve principalmente per distinguere la convergenza *lineare* dalla convergenza *sublineare* (che generalmente tratteremo poco).
+
+È importante notare che $p$ deve essere necessariamente un valore maggiore o al più uguale a 1, altrimenti significherebbe che il metodo che stiamo analizzando in realtà non si sta avvicinando alla soluzione, ma si sta allontanando. Infatti, con $p < 1$, la formula che abbiamo visto sopra non convergerebbe nemmeno a un valore finito.
+
+Dati determinati valori di $p$ e $c$, utilizzeremo la seguente nomenclatura per le tipologie di convergenza.
+
+| `p`   | `c`         | `Convergenza`  |
+| ----- | ----------- | -------------- |
+| $1$   | $1$         | *Sublineare*   |
+| $1$   | $0 < c < 1$ | *Lineare*      |
+| $> 1$ | Qualsiasi   | *Superlineare* |
+| $2$   | Qualsiasi   | *Quadratica*   |
+| $3$   | Qualsiasi   | *Cubica*       |
+- **Sublineare**: L'errore si riduce rispetto all'iterazione precedente, però non in modo proporzionale e generalmente tende a rallentare piuttosto che velocizzarsi. È il tipo di convergenza più lento ed è poco efficiente, si preferiscono metodi numerici che ricadono nelle successive categorie.
+- **Lineare**: L'errore si riduce di un fattore costante a ogni iterazione. Il numero di cifre corrette aumenta linearmente per ogni iterazione.
+- **Quadratica**: L'errore si riduce proporzionalmente al quadrato dell'errore precedente. Il numero di cifre corrette raddoppia (circa) a ogni iterazione.
+- **Cubica**: L'errore si riduce proporzionalmente al cubo dell'errore precedente. Il numero di cifre corrette triplica (circa) a ogni iterazione.
+
+Dalla formula precedente, siccome $x^{(k)} \rightarrow α$ con ordine di convergenza $p$, possiamo dire che asintoticamente (ovvero, per $k$ sufficientemente grande) si ha che $|x^{(k + 1)} - α| \approx c|x^{(k)} - α|^p$. Visto che, asintoticamente, abbiamo che $|x^{(k)} - α| < 1$,  possiamo dedurre che $|x^{(k)} - α|^p$ sarà tanto più piccolo quanto più grande è $p$.
+
+Facciamo ora un esempio. Supponiamo che $\{x^{(k)}\}_{k ∈ N}$ una successione di numeri reali convergente a un certo $α$. Supponiamo che $|x^ {(0)} - α| = 10^{-1}$ e $c = 10^{-1}$. Confrontiamo ora tre metodi, rispettivamente con convergenza lineare, quadratica e cubica, e le diverse progressioni che l'errore assoluto $|x^ {(k)} - α|$ ha nei diversi casi.
+
+| `k`  | `p = 1`    | `p = 2`    | `p = 3`    |
+| ---- | ---------- | ---------- | ---------- |
+| $0$  | $10^{-1}$  | $10^{-1}$  | $10^{-1}$  |
+| $1$  | $10^{-2}$  | $10^{-3}$  | $10^{-4}$  |
+| $2$  | $10^{-3}$  | $10^{-7}$  | $10^{-13}$ |
+| $3$  | $10^{-4}$  | $10^{-15}$ |            |
+| ...  | ...        |            |            |
+| $12$ | $10^{-13}$ |            |            |
+Se avessimo impostato una tolleranza pari a $10^{-13}$ sull'errore assoluto, i tre metodi avrebbero raggiunto l'accuratezza richiesta in, rispettivamente, $12$, $3$ e $2$ passi. A parità di accuratezza della stima iniziale $x^{(0)}$ e di tolleranza, la convergenza è tanto più rapida quanto più grande è l'ordine di grandezza.
+
+L'ordine di convergenza è una proprietà che abbiamo attribuito ad una successione convergente. Nei casi di nostro interesse, le successioni che andremo ad analizzare saranno generate da metodi iterativi per il calcolo degli zeri di funzione. Noteremo, però, che l'ordine di convergenza per queste successioni non è sempre lo stesso, può cambiare in casi estremi, richiedere dei prerequisiti e in alcuni metodi potrebbe non essere stabile a prescindere. Per questo, quando attribuiremo un ordine di convergenza a un metodo iterativo, intenderemo che quello è l'ordine di convergenza che "generalmente", nella maggior parte dei casi, esibiscono le successioni generate da quel metodo.
+
+### Ordine di convergenza del metodo delle successive bisezioni
+Si può dimostrare che, generalmente, se consideriamo $\{x^{(k)}\}_{k ∈ N}$ come la successione generata dal metodo delle successive bisezioni, il rapporto
+
+![Immagine 8](Excalidraw/2025-03-15_00.22.27.excalidraw.svg)
+
+tende ad oscillare, assume valori arbitrariamente grandi e piccoli e di conseguenza non può ammettere limite per $k \rightarrow \infty$. Nonostante la successione non verifichi la condizione di ordine di convergenza per alcun valore di $p \geq 1$, si usa dire che il metodo delle successive bisezioni ha convergenza lineare. Questo si può giustificare con il seguente ragionamento.
+
+Facciamo un richiamo ad alcuni concetti delle lezioni precedenti. Siccome il metodo delle successive bisezioni tende a dimezzare la dimensione dell'intervallo a ogni iterazione, è dunque vera l'uguaglianza vista nella [lezione 1](Lezione1.md):
+
+![Immagine 9](Excalidraw/2025-03-15_00.34.59.excalidraw.svg)
+
+Nella [lezione precedente](Lezione2.md), invece, abbiamo visto come possiamo effettuare una stima dell'errore assoluto utilizzando la differenza dei valori agli estremi dell'intervallo, quando questo è sufficientemente piccolo. Di conseguenza, abbiamo che:
+
+![Immagine 10](Excalidraw/2025-03-15_00.40.00.excalidraw.svg)
+
+Unendo queste due uguaglianze, possiamo seguire il seguente ragionamento. Utilizziamo la stima dell'errore assoluto della seconda uguaglianza per sostituire le differenze degli estremi nella prima uguaglianza con l'errore assoluto. Di conseguenza, otteniamo che:
+
+![Immagine 11](Excalidraw/2025-03-15_00.41.40.excalidraw.svg)
+
+Osservando l'ultimo passo della formula, siamo ritornati alla formula della definizione di ordine di convergenza, ovvero il rapporto degli errori assoluti che tendono asintoticamente a un certo valore $c$. Possiamo notare come, in questo caso specifico, siamo arrivati a ottenere $p = 1$ e $c = \frac{1}{2} < 1$, quindi, per il metodo delle successive bisezioni, si ricade nel caso della convergenza lineare. Non è una dimostrazione rigida, in quanto ci siamo basati su alcune approssimazioni, però è un ragionamento che possiamo seguire per giustificare come, *generalmente*, il metodo delle successive bisezioni abbia convergenza lineare.
+
+### Metodo di Newton
+### [Lezione successiva](Lezione4.md)
 ### [Torna all'indice](../README.md)
