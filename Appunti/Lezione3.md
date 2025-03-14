@@ -105,6 +105,7 @@ Facciamo ora un esempio. Supponiamo che $\{x^{(k)}\}_{k ∈ N}$ una successione 
 | $3$  | $10^{-4}$  | $10^{-15}$ |            |
 | ...  | ...        |            |            |
 | $12$ | $10^{-13}$ |            |            |
+
 Se avessimo impostato una tolleranza pari a $10^{-13}$ sull'errore assoluto, i tre metodi avrebbero raggiunto l'accuratezza richiesta in, rispettivamente, $12$, $3$ e $2$ passi. A parità di accuratezza della stima iniziale $x^{(0)}$ e di tolleranza, la convergenza è tanto più rapida quanto più grande è l'ordine di grandezza.
 
 L'ordine di convergenza è una proprietà che abbiamo attribuito ad una successione convergente. Nei casi di nostro interesse, le successioni che andremo ad analizzare saranno generate da metodi iterativi per il calcolo degli zeri di funzione. Noteremo, però, che l'ordine di convergenza per queste successioni non è sempre lo stesso, può cambiare in casi estremi, richiedere dei prerequisiti e in alcuni metodi potrebbe non essere stabile a prescindere. Per questo, quando attribuiremo un ordine di convergenza a un metodo iterativo, intenderemo che quello è l'ordine di convergenza che "generalmente", nella maggior parte dei casi, esibiscono le successioni generate da quel metodo.
