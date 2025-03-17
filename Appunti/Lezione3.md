@@ -132,5 +132,39 @@ Unendo queste due uguaglianze, possiamo seguire il seguente ragionamento. Utiliz
 Osservando l'ultimo passo della formula, siamo ritornati alla formula della definizione di ordine di convergenza, ovvero il rapporto degli errori assoluti che tendono asintoticamente a un certo valore $c$. Possiamo notare come, in questo caso specifico, siamo arrivati a ottenere $p = 1$ e $c = \frac{1}{2} < 1$, quindi, per il metodo delle successive bisezioni, si ricade nel caso della convergenza lineare. Non è una dimostrazione rigida, in quanto ci siamo basati su alcune approssimazioni, però è un ragionamento che possiamo seguire per giustificare come, *generalmente*, il metodo delle successive bisezioni abbia convergenza lineare.
 
 ### Metodo di Newton
+Questo è un altro metodo iterativo per il calcolo degli zeri di funzione che, insieme al metodo delle bisezioni successive, è una delle scelte preferite per la risoluzione di un'equazione non lineare.
+
+L'idea del metodo è la seguente. Data una stima $x^{(0)}$ della soluzione del problema $f(x) = 0$, si cerca di "linearizzare il problema" vicino a $x^{(0)}$ e risolverlo per ottenere una nuova stima $x^{(1)}$ che sia migliore della precedente. Si continua nello stesso modo per ottenere le stime successive $x^{(2)}$, $x^{(3)}$, ...
+
+Cosa si intende con "linearizzare il problema"? In matematica, linearizzare una funzione significa approssimarla utilizzando in qualche modo la propria derivata. In questo caso, l'idea alla base del teorema di Newton è utilizzare la retta tangente alla funzione nel punto $x^{(k)}$, verificare l'intersezione tra questa retta e l'asse delle ascisse e utilizzare l'intersezione come punto $x^{(k+1)}$. Partendo con una stima vicina allo zero cercato, questo metodo arriverà velocemente a un'approssimazione molto precisa della soluzione. L'idea di questo metodo può essere spiegata più accuratamente con questo esempio.
+
+![Immagine 12](Excalidraw/2025-03-17_23.25.08.excalidraw.svg)
+
+Ci siamo fermati a $x^{(3)}$, però se avessimo continuato avremmo avuto un'approssimazione ancora migliore di $α$.
+
+In un certo senso, stiamo utilizzando la retta tangente di $f$ in $x^{(k)}$ per approssimare $f$ e utilizzare lo zero di quella retta come approssimazione per $α$. Risulta molto più semplice calcolare lo zero per la retta tangente, in quanto, essendo semplicemente una retta, avrà equazione lineare del tipo $y = ax + b$, per la quale è molto semplice calcolare lo zero.
+
+L'equazione della retta tangente a $f$ in $x^{(k)}$ è data dall'equazione $y = f(x^{(k)}) + f'(x^{(k)})(x - x^{(k)})$. Qui entra in gioco la derivata della funzione calcolata in $x^{(k)}$ e rappresenta il coefficiente angolare della retta. Quest'equazione corrisponde anche con il polinomio di Taylor di grado $1$ di $f$ centrato in $x^{(k)}$, quindi anche in questo senso ritorna l'idea di approssimare la retta mediante la sua tangente.
+
+Dobbiamo calcolare quindi lo zero della retta tangente e utilizzarlo come nuova approssimazione di $α$. Porremo quindi $y = 0$ e procederemo per il calcolo di $x$ in quel modo, sapendo che $x^{(k)}$ è la nostra stima attuale. $x$ sarà il valore dello zero e di conseguenza sarà la nuova approssimazione $x^{(k+1)}$.
+
+![Immagine 12](2025-03-17_23.56.52.excalidraw.svg)
+
+Questa formula è valida solo nell'ipotesi che $f'(x^{(k)}) \neq 0$, siccome si trova al denominatore. Da questo ne deriva che il calcolo di uno zero mediante metodo di Newton è un problema tanto più mal condizionato quanto più il valore $f'(x^{(k)})$ si avvicina a zero. Vedremo, infatti, che il metodo di Newton può essere applicato *solo* per calcolare zeri semplici, ovvero zeri di funzione che non hanno derivata nulla.
+
+### Approfondimento sul polinomio di Taylor
+Una tipica applicazione del teorema di Taylor è l'approssimazione di funzioni trascendenti (esponenziali, logaritmiche, trigonometriche) con funzioni facilmente valutabili da una macchina (polinomiali), stimando al tempo stesso l'errore compiuto commettendo quest'approssimazione. Quella che segue è una tabella con i polinomi di Taylor centrati in $x_0 = 0$ di alcune funzioni fondamentali.
+
+|   $f(x)$    |                  $T_n(x)$                   |   Convergenza    |
+| :---------: | :-----------------------------------------: | :--------------: |
+|    $e^x$    |       $1 + x + \frac{x^2}{2!} + ...$        | $\forall x ∈ R$  |
+|  $sin(x)$   | $x - \frac{x^3}{3!} + \frac{x^5}{5!} + ...$ | $\forall x ∈ R$  |
+|  $cos(x)$   | $1 - \frac{x^2}{2!} + \frac{x^4}{4!} + ...$ | $\forall x ∈ R$  |
+| $ln(1 + x)$ | $x - \frac{x^2}{2!} + \frac{x^3}{3!} + ...$ | $- 1 < x \leq 1$ |
+
+Non è semplice immaginare come una funzione trascendente possa essere approssimata mediante una funzione polinomiale. Il processo dietro al polinomio di Taylor può essere visualizzato in questo modo.
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/LkLVMJQAj6A)](https://youtu.be/LkLVMJQAj6A)
+
 ### [Lezione successiva](Lezione4.md)
 ### [Torna all'indice](../README.md)
