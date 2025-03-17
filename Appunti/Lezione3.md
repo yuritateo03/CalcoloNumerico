@@ -164,6 +164,7 @@ Una tipica applicazione del teorema di Taylor è l'approssimazione di funzioni t
 
 Non è semplice immaginare come una funzione trascendente possa essere approssimata mediante una funzione polinomiale, ma possiamo visualizzarlo in questo modo.
 
-![Video serie di Taylor](Excalidraw/TaylorSeriesVisualization.mp4)
+[![](https://markdown-videos-api.jorgenkh.no/youtube/LkLVMJQAj6A)](https://youtu.be/LkLVMJQAj6A)
+
 ### [Lezione successiva](Lezione4.md)
 ### [Torna all'indice](../README.md)
