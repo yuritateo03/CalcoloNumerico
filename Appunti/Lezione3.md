@@ -148,7 +148,7 @@ L'equazione della retta tangente a $f$ in $x^{(k)}$ è data dall'equazione $y = 
 
 Dobbiamo calcolare quindi lo zero della retta tangente e utilizzarlo come nuova approssimazione di $α$. Porremo quindi $y = 0$ e procederemo per il calcolo di $x$ in quel modo, sapendo che $x^{(k)}$ è la nostra stima attuale. $x$ sarà il valore dello zero e di conseguenza sarà la nuova approssimazione $x^{(k+1)}$.
 
-![Immagine 12](2025-03-17_23.56.52.excalidraw.svg)
+![Immagine 12](Excalidraw/2025-03-17_23.56.52.excalidraw.svg)
 
 Questa formula è valida solo nell'ipotesi che $f'(x^{(k)}) \neq 0$, siccome si trova al denominatore. Da questo ne deriva che il calcolo di uno zero mediante metodo di Newton è un problema tanto più mal condizionato quanto più il valore $f'(x^{(k)})$ si avvicina a zero. Vedremo, infatti, che il metodo di Newton può essere applicato *solo* per calcolare zeri semplici, ovvero zeri di funzione che non hanno derivata nulla.
 
@@ -162,9 +162,8 @@ Una tipica applicazione del teorema di Taylor è l'approssimazione di funzioni t
 |  $cos(x)$   | $1 - \frac{x^2}{2!} + \frac{x^4}{4!} + ...$ | $\forall x ∈ R$  |
 | $ln(1 + x)$ | $x - \frac{x^2}{2!} + \frac{x^3}{3!} + ...$ | $- 1 < x \leq 1$ |
 
-Non è semplice immaginare come una funzione trascendente possa essere approssimata mediante una funzione polinomiale. Il processo dietro al polinomio di Taylor può essere visualizzato in questo modo.
+Non è semplice immaginare come una funzione trascendente possa essere approssimata mediante una funzione polinomiale, ma possiamo visualizzarlo in questo modo.
 
-[![](https://markdown-videos-api.jorgenkh.no/youtube/LkLVMJQAj6A)](https://youtu.be/LkLVMJQAj6A)
-
+![Video serie di Taylor](Excalidraw/TaylorSeriesVisualization.mp4)
 ### [Lezione successiva](Lezione4.md)
 ### [Torna all'indice](../README.md)
