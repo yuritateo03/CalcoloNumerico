@@ -166,5 +166,28 @@ Non è semplice immaginare come una funzione trascendente possa essere approssim
 
 [![](https://markdown-videos-api.jorgenkh.no/youtube/LkLVMJQAj6A)](https://youtu.be/LkLVMJQAj6A)
 
+Facciamo un esempio. Supponiamo di dover approssimare $sin(0.1)$ con un errore assoluto non più grande di $10^{-5}$. A questo scopo, possiamo utilizzare il polinomio di Taylor di $sin(x)$ centrato in $x_0 = 0$. Per il teorema di Taylor, scriviamo
+
+![Immagine 13](Excalidraw/2025-03-18_15.23.46.excalidraw.svg)
+
+Approssimando $sin(0.1)$ con $T_n(0.1)$, compiamo un errore assoluto equivalente a $|R_n(0.1)|$. Di conseguenza, abbiamo che $|sin(0.1) - T_n(0.1)| = |R_n(0.1)|$. Per ottenere l'approssimazione con la qualità desiderata, è sufficiente scegliere un $n$ abbastanza grande in modo che $|R_n(0.1)|$ sia minore dell'errore assoluto minimo, in questo caso $10^{-5}$.
+
+La derivata $n$-esima di $sin(x)$ sono tutte funzioni trigonometriche della forma $\pm sin(x)$ o $\pm cos(x)$. Quindi, qualunque sia il valore di $n$ e dell'input della funzione (quindi non ci serve sapere il valore di $c$), siamo certi che sono tutte limitate in valore assoluto a massimo $1$. Grazie a questa proprietà, possiamo stimare un limite superiore dell'errore assoluto e, ponendo questo limite inferiore a $10^{-5}$, possiamo trovare il più piccolo numero naturale $n$ per cui abbiamo la certezza di avere un errore inferiore alla richiesta iniziale.
+
+![Immagine 14](Excalidraw/2025-03-19_14.27.12.excalidraw.svg)
+
+Facciamo quindi una tabella che calcoli il valore della nostra stima dell'errore assoluto per diversi valori di $n$, fermandoci quando raggiungiamo un valore di $n$ per cui la stima è inferiore del limite sull'errore $10^{-5}$.
+
+| $n$ | $\frac{(0.1)^{n + 1}}{(n + 1)!}$         |
+| --- | ---------------------------------------- |
+| $1$ | $\frac{1}{200} = 5 * 10^{-3}$            |
+| $2$ | $\frac{1}{6000} \approx 1.6 * 10^{-4}$   |
+| $3$ | $\frac{1}{240000} \approx 4.6 * 10^{-6}$ |
+
+Dalla tabella, notiamo che è sufficiente porre $n = 3$ per ottenere un approssimazione con errore assoluto inferiore a quello desiderato. Abbiamo quindi che:
+
+![Immagine 15](Excalidraw/2025-03-20_23.22.17.excalidraw.svg)
+
+$T_3(0.1)$ approssima quindi $sin(0.1)$ con un errore assoluto inferiore a $10^{-5}$ (quindi almeno le prime 5 cifre sono accurate).
 ### [Lezione successiva](Lezione4.md)
 ### [Torna all'indice](../README.md)
