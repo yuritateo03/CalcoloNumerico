@@ -1,4 +1,4 @@
-# Criteri di arresto, vantaggi, svantaggi e implementazione del metodo delle successive bisezioni
+# Criteri di arresto, vantaggi, svantaggi e implementazione del metodo delle successive bisezioni, metodo della Regula Falsi
 ### [Lezione precedente](Lezione1.md)
 
 Abbiamo visto come sia quasi statisticamente impossibile che l'algoritmo riesca a calcolare il valore preciso dello zero della funzione, di conseguenza il controllo *esci dal ciclo quando* $f(x^{(k)}) = 0$ è superfluo. Avendo definito i concetti di errore e residuo, possiamo utilizzarli per definire dei nuovi controlli da effettuare per decidere quando terminare l'esecuzione dell'algoritmo.
@@ -55,5 +55,28 @@ Notiamo come l'algoritmo si basi esclusivamente sul segno di $f$ calcolata agli 
 
 ![Immagine 4](Excalidraw/2025-03-08_14.45.57.excalidraw.svg)
 
+### Approfondimento - Metodo della Regula Falsi
+Il metodo della *Regula Falsi* è un altro metodo iterativo per l'approssimazione di uno zero di funzione ed è una variazione del metodo delle successive bisezioni.
+
+Assumiamo di avere una funzione abbiamo una certa $f: [a, b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$. Per il teorema degli zeri, è garantito che nell'intervallo $[a, b]$ sia presente almeno uno zero. L'idea alla base è disegnare la corda che passa per i punti $(a, f(a))$ e $(b, f(b))$ e si trova il punto in cui questa corda interseca l'asse delle ascisse. Quel punto di intersezione rappresenta l'approssimazione dello zero di funzione. 
+
+Da questo punto possiamo poi definire un nuovo intervallo, più piccolo dell'intervallo precedente, e si itera il processo fin quando non si ottiene un'approssimazione con la qualità desiderata. L'intervallo si sceglie in modo analogo al metodo delle bisezioni successive. Assumiamo che $f(a) < 0$ e $f(b) > 0$ (se i segni sono invertiti vale il viceversa). Se $f(a) f(x_n) < 0$, significa che lo zero si trova tra $a$ e $x_n$, di conseguenza il nuovo intervallo sarà $[a, x_n]$. Altrimenti, lo zero si trova tra $x_n$ e $b$ e di conseguenza il nuovo intervallo sarà $[x_n, b]$.
+
+![Immagine 5](Excalidraw/2025-03-21_21.55.19.excalidraw.svg)
+
+Sulla base di quest'idea, cerchiamo ora di arrivare alla formula iterativa. Prendiamo quindi l'equazione della retta passante per i punti $(a, f(a))$ e $(b, f(b))$, isolando $x$ (che sarà il valore della nuova approssimazione) e ponendo $y = 0$, così da trovare il valore $x$ per cui questa retta interseca l'asse delle ascisse. 
+
+![Immagine 5](Excalidraw/2025-03-21_22.00.29.excalidraw.svg)
+
+Possiamo formalizzare questo metodo descrivendolo mediante pseudocodice.
+
+**Input:** $f, a, b, ε$. Si assume $a < b$, $f$ continua, $sing(f(a)) \neq sign(f(b))$.
+
+1. $x = \frac{af(b) - bf(a)}{f(b) - f(a)}$;
+2. Se $b - x < ε$, poni $α = x$ ed esci;
+3. Se $sign(f(a)) \neq sign(f(x))$, allora poni $b = x$, altrimenti poni $a = x$;
+4. Torna al punto 1.
+
+**Output:** $α$
 ### [Lezione successiva](Lezione3.md)
 ### [Torna all'indice](../README.md)
