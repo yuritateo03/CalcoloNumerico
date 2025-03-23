@@ -143,6 +143,5 @@ In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza
 L'espressione $\frac{f(x^{(k)} + h) - f(x^{(k)})}{h}$ è la formula del rapporto incrementale e, prendendo il limite per $h \rightarrow 0$, si ottiene la definizione teorica di derivata di $f$ calcolata in $x^{(k)}$, ovvero $f'(x^{(k)})$, permettendo così di calcolarne direttamente il valore. Non sempre è possibile calcolare direttamente questo limite, per cui generalmente si preferisce assegnare un valore piuttosto piccolo ad $h$ (ad esempio $0.1$, $0.01$, valori piccoli ma comunque diversi da $0$) e questo permette di ottenere un'approssimazione abbastanza accurata di $f'(x^{(k)})$.
 
 Per quanto riguarda l'ordine di convergenza, sebbene in teoria il metodo converga linearmente, scegliendo $h$ in modo ottimale ne risulta un comportamento pressoché indistinguibile dal metodo di Newton.
-
 ### [Lezione successiva](Appunti/Lezione6.md)
 ### [Torna all'indice](../README.md)
