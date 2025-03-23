@@ -189,5 +189,5 @@ Dalla tabella, notiamo che è sufficiente porre $n = 3$ per ottenere un approssi
 ![Immagine 15](Excalidraw/2025-03-20_23.22.17.excalidraw.svg)
 
 $T_3(0.1)$ approssima quindi $sin(0.1)$ con un errore assoluto inferiore a $10^{-5}$ (quindi almeno le prime 5 cifre sono accurate).
-### [Lezione successiva](Lezione4.md)
+### [Lezione successiva](Lezione4_5.md)
 ### [Torna all'indice](../README.md)
