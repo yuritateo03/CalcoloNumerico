@@ -11,8 +11,8 @@ Nel confrontare due metodi iterativi, bisogna tener conto sia dell'ordine di con
 |     *Regula Falsi*     |              $1f$              |           $1$           |
 |        *Newton*        |           $1f + 1f'$           |           $2$           |
 |        *Corde*         |              $1f$              |           $1$           |
-|       *Secanti*        |              $1f$              |          $1.6$          |
-|     *Quasi-Newton*     |              $2f$              |           $2$           |
+|       *Secanti*        |              $1f$              |      $\approx 1.6$      |
+|     *Quasi-Newton*     |              $2f$              |       $\approx 2$       |
 
 Facciamo un esempio e vediamo come sia possibile fare un confronto tra il metodo di Newton e il metodo delle secanti.
 
