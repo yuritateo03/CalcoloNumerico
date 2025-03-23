@@ -1,0 +1,1 @@
+# Confronti tra metodi iterativi, teoria generale dei metodi iterativi ad 1 passo
