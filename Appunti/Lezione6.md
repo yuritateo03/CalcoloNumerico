@@ -130,6 +130,6 @@ Nemmeno le ipotesi di questo corollario sono facili da verificare, in quanto ric
 ### Teorema di convergenza locale per i metodi iterativi ad un passo
 Sia $g: [a, b] \rightarrow R$ continua e derivabile in $[a, b]$ e sia $α ∈ [a, b]$ un punto fisso per $g$. Se  $|g'(α)| < 1$, allora $x^{(k)} \rightarrow α$ per $x^{(0)}$ sufficientemente vicino a $α$. Inoltre, se $g'(α) \neq 0$, la convergenza è lineare. La dimostrazione di questo teorema è nella prossima lezione.
 
-### [Lezione successiva](Lezioni7.md)
+### [Lezione successiva](Lezione7.md)
 ### [Torna all'indice](../README.md)
 
