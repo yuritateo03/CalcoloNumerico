@@ -122,7 +122,7 @@ Siccome $g$ è continua e derivabile in $[a, b]$, allora valgono le ipotesi del 
 
 ![Immagine 15](Excalidraw/2025-03-23_22.59.16.excalidraw.svg)
 
-per qualche $c$ che è compreso tra $x$ e $y$ per il teorema di Lagrange. Siccome, per ipotesi, abbiamo che $λ < 0$, ne segue che $g$ è contrattiva in $[a, b]$ e dunque sono verificate le tesi del teorema delle contrazioni. Inoltre, considerando che $x^{(x + 1)} = g(x^{(k)})$, per ogni $k \geq 0$, se $x^{(0)} \neq α$, sempre dal teorema di Lagrange segue che
+per qualche $c$ che è compreso tra $x$ e $y$ per il teorema di Lagrange. Siccome, per ipotesi, abbiamo che $λ < 1$, ne segue che $g$ è contrattiva in $[a, b]$ e dunque sono verificate le tesi del teorema delle contrazioni. Inoltre, considerando che $x^{(x + 1)} = g(x^{(k)})$, per ogni $k \geq 0$, se $x^{(0)} \neq α$, sempre dal teorema di Lagrange segue che
 
 ![Immagine 16](Excalidraw/2025-03-23_23.16.01.excalidraw.svg)
 
