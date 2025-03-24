@@ -63,7 +63,7 @@ Si dice contrattiva perché applicare la funzione "diminuisce" la distanza tra i
 
 Si può notare che il concetto di contrazione dipende molto dalla pendenza della curva della funzione. Più è bassa la pendenza e più la funzione tenderà a contrarre i valori. Questo fattore di contrazione deve chiaramente essere minore di $1$ per l'appunto, altrimenti non sarà una contrazione ma, invece, la distanza aumenterà. La pendenza di una funzione si può quantificare mediante la sua derivata prima, infatti successivamente vedremo come $f'$ incida su questa cosa.
 
-### Dimostrazione
+#### Dimostrazione
 `Punto 1.` L'esistenza di quel valore è garantita perché le ipotesi del teorema del punto fisso sono verificate, di conseguenza il teorema è valido e la funzione ha un punto fisso. Per l'unicità, procediamo per assurdo e supponiamo che esistano due punti fissi distinti per $g$, $α$ e $β$. Sapendo che sono punti fissi che appartengono all'intervallo, sappiamo che $g(α) = α$ e $g(β) = β$. Sapendo questo e utilizzando la disuguaglianza dell'ipotesi $|g(x) - g(y)| \leq λ|x - y|$, possiamo quindi scrivere
 
 ![Immagine 5](Excalidraw/2025-03-23_21.58.13.excalidraw.svg)
@@ -84,7 +84,7 @@ Riorganizzando opportunamente i termini e utilizzando il punto 2 della tesi, ott
 
 Questo conclude la dimostrazione.
 
-### Osservazioni
+#### Osservazioni
 Dal punto 3 della tesi del teorema precedente, scegliendo $k = 1$, si ottiene
 
 ![Immagine 9](Excalidraw/2025-03-23_22.28.24.excalidraw.svg)
@@ -119,7 +119,7 @@ Se è vero che $λ < 1$, allora valgono le stesse ipotesi del teorema delle cont
 
 E questo implica che $g$ abbia convergenza lineare.
 
-### Dimostrazione
+#### Dimostrazione
 Siccome $g$ è continua e derivabile in $[a, b]$, allora valgono le ipotesi del teorema di Lagrange. Effettuando qualche manipolazione algebrica, possiamo scrivere che, per ogni $x, y ∈ [a, b]$
 
 ![Immagine 15](Excalidraw/2025-03-23_22.59.16.excalidraw.svg)
@@ -130,31 +130,31 @@ per qualche $c$ che è compreso tra $x$ e $y$ per il teorema di Lagrange. Siccom
 
 E questo conclude la dimostrazione.
 
-### Osservazioni
+#### Osservazioni
 Nelle ipotesi del corollario precedente, si ha quindi che se $g'(α) \neq 0$, allora $x^{(k)} \rightarrow α$ con ordine di convergenza lineare. In altri termini, con questo corollario non si può garantire convergenza superlineare per $x^{(k)}$ a meno che $g'(α) = 0$.
 
 Nemmeno le ipotesi di questo corollario sono facili da verificare, in quanto richiedono una buona conoscenza delle proprietà di $g'$ in tutto $[a, b]$. Vediamo adesso un teorema che indebolisce questa richiesta, spostando l'attenzione solo sul valore della derivata "localmente", cioè per un unico punto.
 
 ### Teorema di convergenza locale per i metodi iterativi ad un passo
 Sia $g: [a, b] \rightarrow R$ continua e derivabile in $[a, b]$ e sia $α ∈ [a, b]$ un punto fisso per $g$. Se  $|g'(α)| < 1$, allora $x^{(k)} \rightarrow α$ per $x^{(0)}$ sufficientemente vicino a $α$. Inoltre, se $g'(α) \neq 0$, la convergenza è lineare. 
-### Dimostrazione
+#### Dimostrazione
 Per questa dimostrazione si cerca di utilizzare le ipotesi di partenza per dimostrare che la funzione rispetta le ipotesi del corollario del teorema di contrazione, dimostrando, quindi, che possiamo arrivare alle stesse conclusioni di quel teorema (dimostrando quindi la tesi).
 
-Sappiamo già che $g: [a, b] \rightarrow R$ è continua e derivabile in $[a, b]$, quindi essenzialmente dobbiamo dimostrare le altre due ipotesi del corollario del teorema di contrazione, ovvero che esiste un certo intorno $I$ nel quale la derivata prima è minore di $1$ (e quindi possiamo definire $λ$) e che $g(I) ⊂ I$ (ovvero g si manda in se stessa).
+Sappiamo già che $g: [a, b] \rightarrow R$ è continua e derivabile in $[a, b]$, quindi essenzialmente dobbiamo dimostrare le altre due ipotesi del corollario del teorema di contrazione, ovvero che esiste un certo intorno $I$ nel quale la derivata prima è minore di $1$ (e quindi possiamo definire $λ$) e che $g(I) ⊂ I$ (ovvero $g$ si manda in se stessa).
 
 `Punto 1.` Per ipotesi, sappiamo che $|g'(α)| < 1$. Da questo ne deriva che, per il teorema della permanenza del segno, esiste $ε$ tale che
 
 ![Immagine 17](Excalidraw/2025-03-24_22.28.26.excalidraw.svg)
 
-In parole povere, per il teorema della permanenza del segno, se $|g'(α)| < 1$, questo significa che $g'$ sarà minore di uno anche in prossimità del punto $α$ (non sappiamo quanto sia grande questa prossimità, infatti $ε$ è un valore arbitrario generalmente sconosciuto, ma non ci interessa). Formalmente, questo vuol dire che esiste già un intorno $I = [α - ε, α + ε]$ di $α$ per il quale $|g'(x)| < 1$, dove $x ∈ I$. Questo dimostra quindi la prima ipotesi e, per di più, ipoteticamente ci dice che il valore iniziale $x^{(0)}$ deve essere contenuto in $I$ affinché il metodo converga ad $α$.
+In parole povere, per il teorema della permanenza del segno, se $|g'(α)| < 1$, questo significa che $g'$ sarà minore di uno anche in prossimità del punto $α$ (non sappiamo quanto sia grande questa prossimità, infatti $ε$ è un valore arbitrario generalmente sconosciuto, ma non ci interessa). Formalmente, questo vuol dire che esiste già un intorno $I = [α - ε, α + ε]$ di $α$ per il quale $|g'(x)| < 1$, dove $x ∈ I$. Questo dimostra quindi la prima ipotesi e, per di più, ipoteticamente ci dice che il valore iniziale $x^{(0)}$ deve essere contenuto in $I$ affinché il metodo converga ad $α$, ovvero $x^{(0)}$ deve essere sufficientemente vicino ad $α$.
 
 `Punto 2.` Non mi sto ricordando ragazzi metterò tutto qui appena Pugliese carica gli appunti della lezione 7 :'(
 
 ### Teorema (ordine di convergenza dei metodi iterativi ad 1 passo)
 
-### Dimostrazione
+#### Dimostrazione
 
-### Esempio
+### Esempio - Esercizio con gli ultimi due teoremi
 
 Con questo si conclude la parte di programma dedicata ai metodi numerici per la risoluzione delle equazioni non lineari. Nella prossima lezione passeremo allo studio dei numeri di macchina.
 ### [Lezione successiva](Lezione7.md)
