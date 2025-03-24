@@ -57,6 +57,12 @@ Si ha quindi che
 #### Definizione
 Una funzione che verifichi le condizioni di questo teorema per un certo $0 < λ < 1$ è detta *contrattiva* e $λ$ è detta costante di contrazione. Da queste definizioni deriva il nome del teorema.
 
+Si dice contrattiva perché applicare la funzione "diminuisce" la distanza tra i punti $x$ e $y$, siccome la differenza delle immagini della funzione è minore della differenza dei punti considerati moltiplicati per un certo fattore che è minore di $1$, in questo caso $λ$. A livello geometrico, sul grafico questo significa che la distanza tra i punti $x$ e $y$ sull'asse delle ascisse è maggiore della distanza tra i punti $f(x)$ e $f(y)$ sull'asse delle ordinate.
+
+(Mettere il disegno qui)
+
+A occhio, si può notare che il concetto di contrazione dipende molto dalla pendenza della curva della funzione. Più è bassa la pendenza e più la funzione tenderà a contrarre i valori. Questo fattore di contrazione deve chiaramente essere minore di $1$ per l'appunto, altrimenti non sarà una contrazione ma invece, la distanza aumenterà. La pendenza di una funzione si può quantificare mediante la sua derivata prima, infatti successivamente vedremo come $f'$ incida su questa cosa.
+
 ### Dimostrazione
 `Punto 1.` L'esistenza di quel valore è garantita perché le ipotesi del teorema del punto fisso sono verificate, di conseguenza il teorema è valido e la funzione ha un punto fisso. Per l'unicità, procediamo per assurdo e supponiamo che esistano due punti fissi distinti per $g$, $α$ e $β$. Sapendo che sono punti fissi che appartengono all'intervallo, sappiamo che $g(α) = α$ e $g(β) = β$. Sapendo questo e utilizzando la disuguaglianza dell'ipotesi $|g(x) - g(y)| \leq λ|x - y|$, possiamo quindi scrivere
 
@@ -93,7 +99,7 @@ Questa disequazione ci permette di stimare l'errore assoluto al passo corrente m
 
 Questo vuol dire che, a patto che la costante di contrazione non sia più grande di $\frac{1}{2}$, la distanza tra due iterazioni consecutive è una *sovrastima* dell'errore assoluto al passo corrente e quindi si può utilizzare come criterio di arresto. Nel caso in cui $\frac{1}{2} < λ < 1$, invece, la distanza tra due iterazioni consecutive potrebbe *sottostimare* l'errore assoluto al passo corrente, quindi è sconsigliato usarlo come criterio di arresto (a meno che il metodo analizzato non abbia altre giustificazioni che permettono di utilizzare la distanza tra due iterazioni, come il metodo di Newton o il metodo delle successive bisezioni).
 
-Il teorema delle contrazioni garantisce la convergenza delle iterazioni $x^{(k + 1)} = g(x^{(k)})$ sotto determinate ipotesi, che però non sono sempre facili da verificare. Ci sono altri modi che permettono di ottenere risultati di convergenza sotto ipotesi più forti ma più facilmente verificabili.
+Il teorema delle contrazioni garantisce la convergenza delle iterazioni $x^{(k + 1)} = g(x^{(k)})$ sotto determinate ipotesi, che però non sono sempre facili da verificare. Non è semplice dimostrare che una funzione sia contrattiva, dovremmo verificare che la disuguaglianza è valida per ciascuna coppia di punti nell'intervallo per un certo valore di $λ$. Ci sono altri modi che permettono di ottenere risultati di convergenza sotto ipotesi più forti ma più facilmente verificabili.
 
 ### Teorema di Lagrange
 Sia $g: [a, b] \rightarrow R$ continua in $[a, b]$ e derivabile in $(a, b)$. Allora, per ogni coppia di punti distinti $x, y$ in $[a, b]$ esiste $c$ compreso tra $x$ e $y$ tale che
@@ -125,7 +131,7 @@ E questo conclude la dimostrazione.
 ### Osservazioni
 Nelle ipotesi del corollario precedente, si ha quindi che se $g'(α) \neq 0$, allora $x^{(k)} \rightarrow α$ con ordine di convergenza lineare. In altri termini, con questo corollario non si può garantire convergenza superlineare per $x^{(k)}$ a meno che $g'(α) = 0$.
 
-Nemmeno le ipotesi di questo corollario sono facili da verificare, in quanto richiedono una buona conoscenza delle proprietà di $g'$ in tutto $[a, b]$. Vediamo adesso un teorema che indebolisce questa richiesta, spostando l'attenzione solo sul valore della derivata localmente.
+Nemmeno le ipotesi di questo corollario sono facili da verificare, in quanto richiedono una buona conoscenza delle proprietà di $g'$ in tutto $[a, b]$. Vediamo adesso un teorema che indebolisce questa richiesta, spostando l'attenzione solo sul valore della derivata "localmente", cioè per un unico punto.
 
 ### Teorema di convergenza locale per i metodi iterativi ad un passo
 Sia $g: [a, b] \rightarrow R$ continua e derivabile in $[a, b]$ e sia $α ∈ [a, b]$ un punto fisso per $g$. Se  $|g'(α)| < 1$, allora $x^{(k)} \rightarrow α$ per $x^{(0)}$ sufficientemente vicino a $α$. Inoltre, se $g'(α) \neq 0$, la convergenza è lineare. La dimostrazione di questo teorema è nella prossima lezione.
