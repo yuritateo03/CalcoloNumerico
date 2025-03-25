@@ -12,7 +12,7 @@ Nel confrontare due metodi iterativi, bisogna tener conto sia dell'ordine di con
 |        *Newton*        |           $1f + 1f'$           |           $2$           |
 |        *Corde*         |              $1f$              |           $1$           |
 |       *Secanti*        |              $1f$              |      $\approx 1.6$      |
-|     *Quasi-Newton*     |              $2f$              |       $\approx 2$       |
+|     *Quasi-Newton*     |              $2f$              |           $2$           |
 
 Facciamo un esempio e vediamo come sia possibile fare un confronto tra il metodo di Newton e il metodo delle secanti.
 
@@ -148,13 +148,62 @@ Sappiamo già che $g: [a, b] \rightarrow R$ è continua e derivabile in $[a, b]$
 
 In parole povere, per il teorema della permanenza del segno, se $|g'(α)| < 1$, questo significa che $g'$ sarà minore di uno anche in prossimità del punto $α$ (non sappiamo quanto sia grande questa prossimità, infatti $ε$ è un valore arbitrario generalmente sconosciuto, ma non ci interessa). Formalmente, questo vuol dire che esiste già un intorno $I = [α - ε, α + ε]$ di $α$ per il quale $|g'(x)| < 1$, dove $x ∈ I$. Questo dimostra quindi la prima ipotesi e, per di più, ipoteticamente ci dice che il valore iniziale $x^{(0)}$ deve essere contenuto in $I$ affinché il metodo converga ad $α$, ovvero $x^{(0)}$ deve essere sufficientemente vicino ad $α$.
 
-`Punto 2.` Non mi sto ricordando ragazzi metterò tutto qui appena Pugliese carica gli appunti della lezione 7 :'(
+`Punto 2.` Ora dobbiamo dimostrare che $g(I) ⊂ I$. L'idea consiste nel dimostrare che $g$ sia una funzione contrattiva intorno ad $α$, perché così facendo dimostreremmo che l'intervallo generato da $g(I)$ è più piccolo dell'intervallo $I$ e, di conseguenza, dovrà essere contenuto in esso.
+
+Sia, allora, $y ∈ g(I)$. Per definizione, questo significa che esiste un certo $x ∈ I$ tale che $y = g(x)$. Siccome $g$ è continua e derivabile in $I$, possiamo applicare il teorema di Lagrange a $x$ e $α$.
+
+![Immagine 18](Excalidraw/2025-03-25_23.02.16.excalidraw.svg)
+
+Siccome $α$ è punto fisso di $g$, allora $g(α) = α$. Procediamo quindi definendo $λ$ allo stesso modo del corollario del teorema di contrazione, ovvero come il valore massimo del valore assoluto della derivata prima nell'intervallo $I$. Come dimostrato nel `punto 1`, $|g'|$ sarà minore di $1$ per tutti i valori dell'intervallo $I$, di conseguenza abbiamo che $λ < 1$. Per di più, siccome $c ∈ I$, abbiamo che $|g'(c)| \leq λ < 1$. Di conseguenza, passando in valori assoluti, possiamo scrivere
+
+![Immagine 19](Excalidraw/2025-03-25_23.13.47.excalidraw.svg)
+
+Abbiamo quindi dimostrato che la funzione è contrattiva, di conseguenza l'intervallo $g(I)$ è più piccolo, e quindi sottoinsieme (siccome sono entrambi centrati in $α$), dell'intervallo $I$, ovvero $g(I) ⊂ I$.
+
+Sono quindi verificate le ipotesi del corollario del teorema delle contrazioni e, di conseguenza, vale anche la tesi di quel teorema, concludendo così la dimostrazione.
+
+#### Osservazione
+Una conseguenza del teorema precedente è che un punto fisso $α$ per $g$ tale che $g'(α) < 1$ "attrae" i punti sufficientemente vicini ad esso mediante l'iterazione della funzione $g$. Al contrario, se $|g'(α)| > 1$, iterando la funzione $g$ si tende ad "allontanarsi" dal punto $α$. Infatti, si può dimostrare mediante il teorema di Lagrange che, per $x^{(k)}$ sufficientemente vicino a $α$, si ha che $|x^{(k + 1)} - α| > |x^{(k)} - α|$ (ovvero l'errore assoluto aumenta a ogni iterazione, quindi ci stiamo allontanando da $α$ anziché avvicinarsi) e questo fatto impedisce la convergenza di $x^{(k)}$ a $α$.
+
+Geometricamente, possiamo visualizzare questo concetto mediante questo grafico, immaginando che ogni iterazione della funzione $g'$ equivalga a partire dal punto $x^{(k)}$ considerato, intersecarlo con la funzione e spostandosi orizzontalmente verso la retta bisettrice del primo e terzo quadrante.
+
+![Immagine 20](Excalidraw/2025-03-25_23.24.29.excalidraw.svg)
+
+![Immagine 21](Excalidraw/2025-03-25_23.37.48.excalidraw.svg)
+
+Questi esempi mostrano come un punto fisso con $|g'(α)| < 1$ tende appunto ad attrarre i punti $x^{(k)}$ sufficientemente vicini ad esso, mentre un punto fisso con $|g'(α)| > 1$ tende a farli allontanare. Questo ha anche senso logicamente, perché noi stiamo cercando di avvicinarsi al punto fisso, che per definizione si trova sulla retta $y = x$, cioè la bisettrice del primo e terzo quadrante. Se la nostra funzione avesse una pendenza maggiore rispetto alla pendenza della retta bisettrice (che ha pendenza $1$), la nostra funzione si starebbe allontanando da quel punto più velocemente di quanto il metodo iterativo sia in grado di avvicinarsi ad esso.
+
+#### Definizione
+Sia $g$ derivabile in un intorno di un suo punto fisso $α$. Se $|g'(α)| < 1$, allora $α$ è detto *attrattivo*. Se, invece, $|g'(α)| > 1$, allora $α$ è detto *repulsivo*.
+
+Nel caso in cui $|g'(α)| = 1$, invece, non possiamo trarre conclusioni concrete sul comportamento del punto fisso senza fare uno studio più approfondito del comportamento della funzione $g$ in un intorno di $α$.
 
 ### Teorema (ordine di convergenza dei metodi iterativi ad 1 passo)
+Sia $g$ derivabile $p \geq 2$ volte in un intorno di un suo punto fisso $α$ tale che
 
+![Immagine 22](Excalidraw/2025-03-25_23.53.35.excalidraw.svg)
+
+Allora, per $x^{(0)}$ sufficientemente vicino ad $α$, $x^{(k + 1)} = g(x^{(k)}) \rightarrow α$ con ordine di convergenza $p$.
+
+In sostanza, questo teorema afferma che, per un metodo ad un passo, l'ordine di convergenza è il più piccolo intero $p ∈ N$ per il quale la derivata $p$-esima di $g$ è diversa da zero in $α$. Per di più, una conseguenza di questo teorema è che i metodi ad un passo possono avere come ordine di convergenza solo un numero intero. Possiamo rendercene conto ritornando alla tabella all'inizio della lezione. Notiamo anche come l'unico metodo a non avere un numero intero come ordine di convergenza è il metodo delle secanti, l'unico metodo ad essere non a uno ma a due passi.
 #### Dimostrazione
+Scriviamo $g(x^{(k)})$ utilizzando il suo relativo polinomio di Taylor, centrato in $α$ e valutato in $x^{(k)}$.
 
+![Immagine 23](Excalidraw/2025-03-25_23.58.22.excalidraw.svg)
+
+Con $c^{(k)}$ compreso tra $x^{(k)}$ e $α$. Sfruttando le ipotesi (ovvero il fatto che tutte le derivate eccetto la derivata $p$-esima sono nulle e quindi si annullano quasi tutti i termini, lasciando solo $g(α) + R_n(x^{(k)})$), sfruttando il fatto che $g(x^{(k)}) = x^{(k + 1)}$ (perché funzione iteratrice) e che $g(α) = α$ (perché è punto fisso di $g$) e ridistribuendo opportunamente i termini dell'equazione, possiamo scrivere
+
+![Immagine 24](Excalidraw/2025-03-26_00.04.59.excalidraw.svg)
+
+Essendo $|g'(α)| = 0 < 1$, per i teoremi precedenti abbiamo che sia $x^{(k)}$ che $c^{(k)}$ convergono a $α$. Passando ai valori assoluti, al limite per $k \rightarrow \infty$ e riorganizzando opportunamente l'ultima equazione, otteniamo
+
+![Immagine 25](Excalidraw/2025-03-26_00.11.10.excalidraw.svg)
+
+Che è ancora una volta la formula della definizione di ordine di convergenza. Sappiamo per ipotesi che $g^{(p)}(α) \neq 0$ per ipotesi, di conseguenza questa formula tenderà a un valore diverso da $0$. Questo dimostra quindi che $x^{(k + 1)} = g(x^{(k)}) \rightarrow α$ con ordine di convergenza $p$, e quindi la tesi è dimostrata.
 ### Esempio - Esercizio con gli ultimi due teoremi
+![[Excalidraw/EsercizioEsempioLezione7.png]]
+
+(Poi lo riscrivo io a mano ma per ora metto questo placeholder)
 
 Con questo si conclude la parte di programma dedicata ai metodi numerici per la risoluzione delle equazioni non lineari. Nella prossima lezione passeremo allo studio dei numeri di macchina.
 ### [Lezione successiva](Lezione7.md)
