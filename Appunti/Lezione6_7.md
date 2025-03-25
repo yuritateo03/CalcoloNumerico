@@ -201,7 +201,7 @@ Essendo $|g'(α)| = 0 < 1$, per i teoremi precedenti abbiamo che sia $x^{(k)}$ c
 
 Che è ancora una volta la formula della definizione di ordine di convergenza. Sappiamo per ipotesi che $g^{(p)}(α) \neq 0$ per ipotesi, di conseguenza questa formula tenderà a un valore diverso da $0$. Questo dimostra quindi che $x^{(k + 1)} = g(x^{(k)}) \rightarrow α$ con ordine di convergenza $p$, e quindi la tesi è dimostrata.
 ### Esempio - Esercizio con gli ultimi due teoremi
-![[Excalidraw/EsercizioEsempioLezione7.png]]
+![Immagine 26](Excalidraw/EsercizioEsempioLezione7.png)
 
 (Poi lo riscrivo io a mano ma per ora metto questo placeholder)
 
