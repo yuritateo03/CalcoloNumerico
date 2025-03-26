@@ -1,6 +1,6 @@
 # Confronti tra metodi iterativi, teoria generale dei metodi iterativi ad 1 passo
 
-### [Lezione precedente](Lezione3.md)
+### [Lezione precedente](Lezione4_5.md)
 
 ### Confronto tra metodi iterativi
 Nel confrontare due metodi iterativi, bisogna tener conto sia dell'ordine di convergenza atteso che del costo di ogni iterata (misurato in unità di tempo). Questo costo lo misureremo in numero di volte in cui andrà valutata la funzione (valutazioni uniche, valutare una funzione nello stesso punto due volte o più verrà considerata come un'unica valutazione) . Compiliamo adesso una tabella in cui inseriremo i vari metodi iterativi e le loro informazioni rilevanti per il confronto, ovvero il costo e l'ordine di convergenza. Utilizzeremo la notazione "$nf$" per indicare che la funzione $f$ deve essere valutata $n$ volte per ogni iterazione di quel metodo. Per l'ordine di convergenza, indicheremo il valore che ci attendiamo di osservare sperimentalmente nelle condizioni tipiche.
@@ -202,8 +202,6 @@ Essendo $|g'(α)| = 0 < 1$, per i teoremi precedenti abbiamo che sia $x^{(k)}$ c
 Che è ancora una volta la formula della definizione di ordine di convergenza. Sappiamo per ipotesi che $g^{(p)}(α) \neq 0$ per ipotesi, di conseguenza questa formula tenderà a un valore diverso da $0$. Questo dimostra quindi che $x^{(k + 1)} = g(x^{(k)}) \rightarrow α$ con ordine di convergenza $p$, e quindi la tesi è dimostrata.
 ### Esempio - Esercizio con gli ultimi due teoremi
 ![Immagine 26](Excalidraw/EsercizioEsempioLezione7.png)
-
-(Poi lo riscrivo io a mano ma per ora metto questo placeholder)
 
 Con questo si conclude la parte di programma dedicata ai metodi numerici per la risoluzione delle equazioni non lineari. Nella prossima lezione passeremo allo studio dei numeri di macchina.
 ### [Lezione successiva](Lezione7.md)

@@ -9,3 +9,4 @@
 
 ## 2. Insieme dei numeri di macchina
    - **Lezione 7** -  [Introduzione ai numeri di macchina](Appunti/Lezione7.md)
+   - **Lezione 8** - [Coming soon](Appunti/Lezione8.md)
