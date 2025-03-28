@@ -191,7 +191,7 @@ Scriviamo $g(x^{(k)})$ utilizzando il suo relativo polinomio di Taylor, centrato
 
 ![Immagine 23](Excalidraw/2025-03-25_23.58.22.excalidraw.svg)
 
-Con $c^{(k)}$ compreso tra $x^{(k)}$ e $α$. Sfruttando le ipotesi (ovvero il fatto che tutte le derivate eccetto la derivata $p$-esima sono nulle e quindi si annullano quasi tutti i termini, lasciando solo $g(α) + R_n(x^{(k)})$), sfruttando il fatto che $g(x^{(k)}) = x^{(k + 1)}$ (perché funzione iteratrice) e che $g(α) = α$ (perché è punto fisso di $g$) e ridistribuendo opportunamente i termini dell'equazione, possiamo scrivere
+Con $c^{(k)}$ compreso tra $x^{(k)}$ e $α$. Sfruttando le ipotesi (ovvero il fatto che tutte le derivate eccetto la derivata $p$-esima sono nulle e quindi si annullano quasi tutti i termini, lasciando solo $g(α) + R_n(x^{(k)})$ ), sfruttando il fatto che $g(x^{(k)}) = x^{(k + 1)}$ (perché funzione iteratrice) e che $g(α) = α$ (perché è punto fisso di $g$) e ridistribuendo opportunamente i termini dell'equazione, possiamo scrivere
 
 ![Immagine 24](Excalidraw/2025-03-26_00.04.59.excalidraw.svg)
 
