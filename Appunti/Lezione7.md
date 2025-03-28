@@ -92,7 +92,9 @@ L'insieme è costituito da 32 elementi, di cui ne listeremo qualcuno per esempio
 
 ![Immagine 13](Excalidraw/2025-03-26_20.21.35.excalidraw.svg)
 
-Scrivendo tutti i termini e piazzandoli sulla retta dei numeri si può anche osservare il fenomeno dell'addensamento dei numeri di macchina intorno a *realmin* e la loro dispersione man mano che ci si avvicina a *realmax* menzionata precedentemente nella lezione.
+Scrivendo tutti i termini e piazzandoli sulla retta dei numeri si può anche osservare il fenomeno dell'addensamento dei numeri di macchina intorno a *realmin* e la loro dispersione man mano che ci si avvicina a *realmax* menzionata precedentemente nella lezione, come nell'immagine di sotto.
+
+![[LineaDeiNumeriDiMacchinaEsempio.png]]
 ### [Lezione successiva](Lezione8.md)
 ### [Torna all'indice](../README.md)
 
