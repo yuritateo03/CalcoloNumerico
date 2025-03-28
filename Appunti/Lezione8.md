@@ -16,12 +16,12 @@ Questo serve perché $q$ è una stringa a 8 bit, di conseguenza può assumere va
 
 La quantità che abbiamo sottratto e della quale trasliamo $q$ è detta *bias* e, per l'appunto, il *bias* di questo standard è $127$. Sapendo questo, l'insieme dei numeri di macchina dello standard IEEE 754 è $F(2, 23, -127, 128)$. Come accennato sopra, i valori agli estremi del range di $q$ hanno un significato particolare che documenteremo in questa tabella.
 
-|    `p`     |      `f`       |   `Significato`    |
-| :--------: | :------------: | :----------------: |
-| $00000000$ |   $= 00...0$   | *Zero di macchina* |
-| $00000000$ | $\neq 00... 0$ | *Numeri denormali* |
-| $11111111$ |  $= 00... 0$   |     $\pm Inf$      |
-| $11111111$ | $\neq 00... 0$ |       $NaN$        |
+|    `p`     |      `f`      |   `Significato`    |
+| :--------: | :-----------: | :----------------: |
+| $00000000$ |  $= 00...0$   | *Zero di macchina* |
+| $00000000$ | $\neq 00...0$ | *Numeri denormali* |
+| $11111111$ |  $= 00...0$   |     $\pm Inf$      |
+| $11111111$ | $\neq 00...0$ |       $NaN$        |
 
 Lo zero di macchina indica un numero che rappresenta $0$ per quel calcolatore. Secondo la definizione di insieme di numeri di macchina che abbiamo dato nella [lezione precedente](Lezione7.md), abbiamo detto che $0 \notin F$, di conseguenza è necessario avere qualche modo per rappresentarlo.
 
