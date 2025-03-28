@@ -64,7 +64,7 @@ Quest'espressione è piuttosto scomoda da calcolare, però c'è un modo più con
 
 Facciamo adesso un'osservazione limitandoci ai numeri strettamente positivi per semplicità. Per definizione, non esistono numeri di macchina normali più piccoli di *realmin* o più grandi di *realmax*. In caso volessimo rappresentare un numero $x > realmax$, incorreremo nel cosiddetto errore di *overflow*, mentre nel caso in cui volessimo rappresentare un numero $x < realmin$, incorreremo nel cosiddetto errore di *underflow*.
 
-Per di più, per la natura di $a^x$ come funzione esponenziale (nel caso dei numeri di macchina ci riferiamo a $β^p$), i numeri di macchina non sono distribuiti in modo equidistante sulla retta dei numeri reali. Siccome $β^p$ cresce esponenzialmente e stiamo moltiplicando le nostre cifre per questo numero, l'effetto che si ottiene è che quanto più $p$ è grande, tanto più due numeri di macchina successivi saranno distanti tra di loro. Questo implica che c'è un addensamento di numeri di macchina quanto più vicini siamo a *realmin*, mentre diventano più sparsi quanto più ci avviciniamo a *realmax*. 
+Per di più, per la natura di $a^x$ come funzione esponenziale (nel caso dei numeri di macchina ci riferiamo a $β^p$), i numeri di macchina non sono distribuiti in modo equidistante sulla retta dei numeri reali. Siccome $β^p$ cresce esponenzialmente e stiamo moltiplicando le nostre cifre per questo numero, l'effetto che si ottiene è che quanto più $p$ è grande, tanto più due numeri di macchina successivi saranno distanti tra di loro. Questo discorso lo formalizzeremo meglio tra poco. Questo implica che c'è un addensamento di numeri di macchina quanto più vicini siamo a *realmin*, mentre diventano più sparsi quanto più ci avviciniamo a *realmax*. 
 
 Questo discorso e il concetto di *underflow* tendono a causare una perdita di precisione quando abbiamo un numero $x < realmin$ oppure quando $x$ è un numero che si avvicina a $realmax$. Gli effetti di questa perdita di precisione saranno visti meglio nelle prossime lezioni.
 
@@ -92,9 +92,12 @@ L'insieme è costituito da 32 elementi, di cui ne listeremo qualcuno per esempio
 
 ![Immagine 13](Excalidraw/2025-03-26_20.21.35.excalidraw.svg)
 
-Scrivendo tutti i termini e piazzandoli sulla retta dei numeri si può anche osservare il fenomeno dell'addensamento dei numeri di macchina intorno a *realmin* e la loro dispersione man mano che ci si avvicina a *realmax* menzionata precedentemente nella lezione, come nell'immagine di sotto.
+### Distanza tra numeri di macchina consecutivi
+Scrivendo tutti i termini dell'esercizio precedente e piazzandoli sulla retta dei numeri, si può anche osservare il fenomeno dell'addensamento dei numeri di macchina intorno a *realmin* e la loro dispersione man mano che ci si avvicina a *realmax* menzionata precedentemente nella lezione, come nell'immagine di sotto.
 
 ![Immagine 14](Excalidraw/LineaDeiNumeriDiMacchinaEsempio.png)
+
+Possiamo giustificare questa osservazione studiando la distanza tra due numeri di macchina consecutivi. Se $x = d_0.d_1d_2...d_t * β^p$, il successivo numero di macchina si ottiene aggiungendo il più piccolo numero di macchina che si può scrivere con esponente $p$, ovvero il numero $d = 0.00...01 * β^p = β^{p - t}$. Da questo deduciamo che la distanza tra due numeri di macchina consecutivi $x, y ∈ F(β, t, M_1, M_2)$ tali che $|x|, |y| ∈ [β^p, β^{p + 1}]$ è $β^{p - t}$.
 ### [Lezione successiva](Lezione8.md)
 ### [Torna all'indice](../README.md)
 
