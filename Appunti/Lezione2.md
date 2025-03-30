@@ -3,7 +3,7 @@
 
 Abbiamo visto come sia quasi statisticamente impossibile che l'algoritmo riesca a calcolare il valore preciso dello zero della funzione, di conseguenza il controllo *esci dal ciclo quando* $f(x^{(k)}) = 0$ è superfluo. Avendo definito i concetti di errore e residuo, possiamo utilizzarli per definire dei nuovi controlli da effettuare per decidere quando terminare l'esecuzione dell'algoritmo.
 
-## Criteri di arresto
+### Criteri di arresto
 Possiamo quindi utilizzare i concetti di errori e residuo per determinare quando l'algoritmo può fermarsi. L'idea è fornire in input un certo valore ε che definiremo *tolleranza* e terminare l'algoritmo solo quando il calcolo della stima dell'errore sia inferiore a questo valore. Questo ci assicura che la nostra approssimazione abbia un certo livello di qualità, in linea con il valore ε.
 
 Come abbiamo accennato nella lezione precedente, in queste condizioni non abbiamo modo di calcolare direttamente i valori di errore relativo e assoluto, siccome non disponiamo del valore preciso α dello zero della funzione. È possibile, però, fare delle *stime* relative a questi valori che possono comunque essere utilizzate come criteri di arresto.
@@ -28,7 +28,7 @@ Esiste anche un ulteriore criterio per calcolare la stima sull'errore assoluto. 
 
 ![Immagine 3](Excalidraw/2025-03-08_14.15.28.excalidraw.svg)
 
-## Vantaggi e Svantaggi
+### Vantaggi e Svantaggi
 Il metodo delle successive bisezioni offre i seguenti vantaggi:
 - È semplice.
 - È versatile e le condizioni necessarie sono semplici, non serve che $a$ e $b$ (estremi dell'intervallo) siano vicini ad $α$, è sufficiente che $f(a)f(b) < 0$ (si dice che questo metodo gode di proprietà di convergenza di tipo globale).
@@ -39,7 +39,7 @@ In compenso, però, presenta i seguenti svantaggi:
 - Ha una convergenza non-monotona e scarta frequentemente buone approssimazioni della soluzione.
 - Non può essere applicato per calcolare uno zero contenuto in un intorno nel quale la funzione $f$ non cambia mai segno (ad esempio $f(x) = x^2$).
 
-## Pseudocodice
+### Pseudocodice
 **Input:** $f, a, b, ε$. Si assume $a < b$, $f$ continua, $sing(f(a)) \neq sign(f(b))$.
 
 1. $x = \frac{1}{2} (a + b)$;

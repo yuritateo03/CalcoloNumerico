@@ -1,5 +1,6 @@
 # Metodo delle successive bisezioni, errore e residuo
 
+### Zeri di funzione
 In questa parte di programma ci concentreremo sulla risoluzione di un problema specifico. Data una certa funzione $f: [a, b] \rightarrow R$, continua nel suo dominio, bisogna calcolare un certo valore $α ∈ [a, b]$ tale che $f(α) = 0$. Graficamente, questo equivale a cercare un punto di intersezione del grafico di $f$ con l'asse delle $x$.
 
  ![Immagine 1](Excalidraw/Immagine1.svg)
@@ -19,7 +20,7 @@ Si noti bene che il teorema degli zeri indica una condizione *sufficiente* ma no
 Per garantire anche l'unicità dello zero, oltre a verificare le ipotesi del teorema degli zeri, la funzione deve anche essere strettamente monotona (quindi deve essere o strettamente crescente o strettamente decrescente) nell'intervallo $[a, b]$. 
 
 I metodi numerici che studieremo per l'approssimazione degli zeri saranno di natura *iterativa*. Produrranno una successione di approssimazioni che, presumibilmente, converge al valore preciso della soluzione. Ogni valore della successione si calcola mediante il suo predecessore e, man mano che si itera, si otterrà un'approssimazione sempre migliore della soluzione.
-## Metodo delle successive bisezioni
+### Metodo delle successive bisezioni
 Questo è il primo metodo che esamineremo. È uno degli algoritmi più semplici e robusti per la ricerca di zeri di funzioni.
 
 Le ipotesi di partenza di questo metodo sono le stesse del teorema degli zeri, ovvero abbiamo una certa $f: [a, b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$. L'idea chiave alla base del metodo è suddividere ripetutamente l'intervallo $[a, b]$ utilizzando il punto medio tra i due estremi. Il nuovo intervallo sarà dato dal punto medio e dall'estremo in cui $f$ assume segno opposto. 
@@ -56,7 +57,7 @@ L'algoritmo si ferma in un numero finito di passi soltanto se si ha $f(x^{(k)}) 
 La probabilità che si realizzi il punto 1 dell'algoritmo, e quindi che l'algoritmo abbia un numero finito di passi, è trascurabile e, nella pratica, rende superfluo il controllo.
 
 Per questo motivo, bisogna trovare un altro modo per decidere quando fermare l'algoritmo. Ci vogliamo fermare quando la nostra approssimazione è molto vicina alla soluzione. A questo scopo, definiamo i concetti di errore e residuo.
-## Errore e residuo
+### Errore e residuo
 Siano $α, \dot α ∈ R$, con $\dot α$ che rappresenta un'approssimazione di $α$. Definiamo le quantità *Errore Assoluto* e *Errore relativo* dell'approssimazione le quantità:
 
 ![Immagine 4](Excalidraw/25-03_23-11-5625-03.excalidraw.svg)

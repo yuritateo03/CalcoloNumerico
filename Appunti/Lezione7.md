@@ -3,7 +3,6 @@
 ### [Lezione precedente](Lezione6_7.md)
 
 ### Numeri di macchina
-
 Un computer ha quantità finita di memoria. Questo implica che può memorizzare solo una quantità finita di numeri, ognuno dei quali dovrà necessariamente essere rappresentato attraverso un numero finito di cifre. Banalmente, questo significa che un numero decimale infinito come $\frac{1}{3} = 0.\overline3$ o un numero reale come $π$ non possono essere conservati su una macchina senza essere troncati in qualche modo. L'obiettivo di questa parte di programma è capire in quali modo i numeri reali vengono approssimati su computer mediante i cosiddetti *numeri di macchina* e studiare l'errore che nasce da questa approssimazione.
 
 ### Teorema di rappresentazione in base
