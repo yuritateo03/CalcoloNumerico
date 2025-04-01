@@ -124,5 +124,15 @@ Per di più, se il valore $|x|$ è molto piccolo, allora tutti i termini $x^2, x
 ![Immagine 14](Excalidraw/2025-03-30_01.10.15.excalidraw.svg)
 
 Quindi anche la divisione in aritmetica finita è sempre ben condizionata e ha fattore di condizionamento $K = 2$.
-### [Lezione successiva](Lezione9.md)
+
+### Condizionamento di una funzione generica
+Concludiamo lo studio dell'errore in aritmetica finita con l'analisi del condizionamento di una funzione generica $f: R \rightarrow R$. Per semplicità, supporremo che l'operazione di valutazione di una funzione $x \rightarrow f(x)$ non generi alcun errore e che, quindi, gli unici errori siano dovuti all'arrotondamento di $x$ e $f(x)$. Possiamo quindi scrivere
+
+![Immagine 15](Excalidraw/2025-04-01_16.18.21.excalidraw.svg)
+
+Adesso, assegneremo alla quantità $xε_x$ una variabile $h$. Siccome $ε_x$ è molto piccolo rispetto a $x$, possiamo interpretare $h$ come un piccolo incremento $h = xε_x$ rispetto a $x$. Adesso moltiplichiamo e dividiamo per $h$, ottenendo quindi
+
+![Immagine 16](Excalidraw/2025-04-01_16.25.28.excalidraw.svg)
+
+Da questo ne deduciamo che il fattore di condizionamento $K$ per una funzione generica $f$ è dato dall'espressione $K(x) = |\frac{xf'(x)}{f(x)}|$. Come al solito, se $K \approx 1$ allora la valutazione della funzione sarà ben condizionata, mentre, se $K >> 1$, allora sarà mal condizionata. Siccome stiamo dividendo per $|f(x)|$, il valore di $K$ sarà strettamente dipendente dall'ordine di grandezza della funzione valutata in $x$. Il problema sarà tanto più mal condizionato quanto più il valore di $|f(x)|$ è vicino a $0$.
 ### [Torna all'indice](../README.md)

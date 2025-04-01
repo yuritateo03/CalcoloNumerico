@@ -99,6 +99,6 @@ Scrivendo tutti i termini dell'esercizio precedente e piazzandoli sulla retta de
 ![Immagine 14](Excalidraw/LineaDeiNumeriDiMacchinaEsempio.png)
 
 Possiamo giustificare questa osservazione studiando la distanza tra due numeri di macchina consecutivi. Se $x = d_0.d_1d_2...d_t * β^p$, il successivo numero di macchina si ottiene aggiungendo il più piccolo numero di macchina che si può scrivere con esponente $p$, ovvero il numero $d = 0.00...01 * β^p = β^{p - t}$. Da questo deduciamo che la distanza tra due numeri di macchina consecutivi $x, y ∈ F(β, t, M_1, M_2)$ tali che $|x|, |y| ∈ [β^p, β^{p + 1}]$ è $β^{p - t}$.
-### [Lezione successiva](Lezione8.md)
+### [Lezione successiva](Lezione8_9.md)
 ### [Torna all'indice](../README.md)
 
