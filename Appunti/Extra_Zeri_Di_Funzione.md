@@ -62,7 +62,7 @@ L'idea alla base è disegnare la corda che passa per i punti $(a, f(a))$ e $(b, 
 #### Convergenza
 La convergenza del metodo delle successive bisezioni è garantita se $f: [a,b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$, le stesse condizioni del teorema degli zeri.
 
-Come nel metodo delle successive bisezioni, non è possibile dimostrare formalmente la convergenza di questo metodo. Nonostante ciò, si può utilizzare un ragionamento informale per dire che, generalmente, il metodo del Regula Falsi ha convergenza lineare.
+Come nel metodo delle successive bisezioni, non è possibile dimostrare formalmente la convergenza di questo metodo. Nonostante ciò, generalmente si dice che il metodo del Regula Falsi ha convergenza lineare.
 
 ### Metodo di Newton
 #### Descrizione del metodo
