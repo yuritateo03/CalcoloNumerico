@@ -11,6 +11,7 @@
 |       *Secanti*        |      $\approx 1.6$      |
 |     *Quasi-Newton*     |           $2$           |
 
+ ---
 
 ### Successive Bisezioni
 #### Descrizione del metodo
@@ -41,7 +42,7 @@ tende ad oscillare e quindi non ammette limite per $k \rightarrow \infty$, non p
 Dato un certo valore $ε>0$ che chiameremo *tolleranza sull'errore*, possiamo fermare le iterazioni del metodo quando la stima dell'errore è minore di $ε$. Possiamo calcolare la stima dell'errore in diversi modi, chiamati criteri di arresto (generalmente ne vuole solo due a scelta per l'esercizio):
 
 ![Immagine 16](Excalidraw/2025-03-23_16.27.22.excalidraw.svg)
-
+ ---
 ### Regula Falsi
 #### Descrizione del metodo
 Il metodo della *Regula Falsi* è un metodo iterativo per l'approssimazione di uno zero di funzione ed è una variazione del metodo delle successive bisezioni. Assumiamo di avere una funzione abbiamo una certa $f: [a, b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$. Per il teorema degli zeri, è garantito che nell'intervallo $[a, b]$ sia presente almeno uno zero. 
@@ -64,7 +65,7 @@ L'idea alla base è disegnare la corda che passa per i punti $(a, f(a))$ e $(b, 
 La convergenza del metodo delle successive bisezioni è garantita se $f: [a,b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$, le stesse condizioni del teorema degli zeri.
 
 Come nel metodo delle successive bisezioni, non è possibile dimostrare formalmente la convergenza di questo metodo. Nonostante ciò, generalmente si dice che il metodo del Regula Falsi ha convergenza lineare.
-
+ ---
 ### Metodo di Newton
 #### Descrizione del metodo
 Il metodo delle successive bisezioni è uno dei metodi più conosciuti per l'approssimazione degli zeri di funzione. L'idea alla base del metodo procede in questo modo.
@@ -104,24 +105,24 @@ Affinché la convergenza sia garantita, quindi, è necessario che $f$ sia contin
 Dato un certo valore $ε>0$ che chiameremo *tolleranza sull'errore*, possiamo fermare le iterazioni del metodo quando la stima dell'errore è minore di $ε$. Possiamo calcolare la stima dell'errore in diversi modi, chiamati criteri di arresto (generalmente ne vuole solo due a scelta per l'esercizio):
 
 ![Immagine 16](Excalidraw/2025-03-23_16.27.22.excalidraw.svg)
-
+ ---
 ### Varianti del metodo di Newton senza derivata
 Il metodo di Newton ha ottime proprietà di convergenza ma ha alcuni svantaggi. Ad esempio, ad ogni passo è richiesto il calcolo della derivata prima di $f$. Questa potrebbe non essere nota (ad esempio nel caso in cui la mappatura $x \rightarrow f(x)$ sia nota ma provenga da una "black box", ovvero la funzione in sé è sconosciuta), oppure è nota ma è molto onerosa da calcolare. Quando il calcolo della derivata prima di $f$ causa problemi, ci si rivolge a varianti del metodo di Newton dette *derivative-free*, ovvero esenti dall'uso della derivata.
-
+ ---
 #### Metodo delle corde
 In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza è che anziché utilizzare la retta tangente alla funzione calcolata nel punto considerato, si utilizza una retta che ha una certa pendenza fissa per ogni iterazione. Questa pendenza corrisponderà a un certo valore $m \neq 0$ prefissato.
 
 ![Immagine 19](Excalidraw/2025-03-23_18.03.18.excalidraw.svg)
 
 La convergenza di questo metodo è garantita, secondo la teoria dei metodi iterativi ad un passo, quando si ha che $|g'(α)| < 1$, dove $g(x)$ è la funzione iteratrice del metodo. Generalmente, il metodo delle corde ha convergenza lineare, però, scegliendo $m \approx f'(α)$ si può ottenere una convergenza anche quadratica o superiore.
-
+ ---
 #### Metodo delle secanti
 In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza è che, anziché utilizzare la retta tangente, si utilizza la retta passante per i due punti generati dalle iterazioni precedenti del metodo. Geometricamente, quindi, la retta tangente è sostituita dalla retta secante passante per i punti del grafico $(x^{(k - 1)}, f(x^{(k - 1)}))$ e $(x^{(k)}, f(x^{(k)}))$ e si trova l'intersezione tra questa secante e l'asse delle ascisse per trovare il punto $x^{(k + 1)}$. È quindi un metodo "a due passi", ovvero sono necessarie due iterazioni precedenti della funzione per calcolare la successiva. 
 
 ![Immagine 20](Excalidraw/2025-03-23_18.29.38.excalidraw.svg)
 
 Questo è un metodo a due passi, quindi non possiamo fare le stesse considerazioni che abbiamo fatto mediante la teoria dei metodi a un passo. Però si può dimostrare che, se $α$ è zero semplice di $f$, $f$ è sufficientemente regolare e $x^{(0)}$ e $x^{(1)}$ sono sufficientemente vicini a $α$, allora il metodo produce una successione che converge a $α$ con ordine di convergenza non inferiore a $φ = \frac {sqrt(5) + 1}{2} \approx 1.6$. È dunque un metodo superlineare.
-
+ ---
 #### Metodo quasi-Newton
 In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza è che si utilizza *un'approssimazione* del valore della derivata prima anziché utilizzarne il valore preciso.
 
