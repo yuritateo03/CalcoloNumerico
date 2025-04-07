@@ -204,6 +204,8 @@ Che è ancora una volta la formula della definizione di ordine di convergenza. S
 ![Immagine 26](Excalidraw/EsercizioEsempioLezione7.png)
 
 Con questo si conclude la parte di programma dedicata ai metodi numerici per la risoluzione delle equazioni non lineari. Nella prossima lezione passeremo allo studio dei numeri di macchina.
+
+### [Specchietto Riassuntivo](Extra_Zeri_Di_Funzione.md)
 ### [Lezione successiva](Lezione7.md)
 ### [Torna all'indice](../README.md)
 
