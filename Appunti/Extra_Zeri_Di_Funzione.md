@@ -1,6 +1,6 @@
 # Recap dei metodi iterativi per il calcolo degli zeri di funzione
 
-## Specchietto riassuntivo
+### Elenco dei metodi e rispettivo ordine di convergenza
 
 |        `Metodo`        | `Ordine di convergenza` |
 | :--------------------: | :---------------------: |
