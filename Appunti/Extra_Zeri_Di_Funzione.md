@@ -11,6 +11,7 @@
 |       *Secanti*        |      $\approx 1.6$      |
 |     *Quasi-Newton*     |           $2$           |
 
+
 ### Successive Bisezioni
 #### Descrizione del metodo
 Il metodo delle successive bisezioni è uno dei metodi più conosciuti per l'approssimazione degli zeri di funzione. Innanzitutto, ipotizziamo di avere una certa $f: [a,b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$. Questo garantisce la presenza di uno zero nell'intervallo $[a,b]$ grazie al teorema degli zeri.
