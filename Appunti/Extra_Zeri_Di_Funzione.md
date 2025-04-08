@@ -60,13 +60,13 @@ L'idea alla base è disegnare la corda che passa per i punti $(a, f(a))$ e $(b, 
 **Output:** $α$
 
 #### Convergenza
-La convergenza del metodo delle successive bisezioni è garantita se $f: [a,b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$, le stesse condizioni del teorema degli zeri.
+La convergenza del metodo del Regula Falsi è garantita se $f: [a,b] \rightarrow R$ continua e tale che $f(a)f(b) < 0$, le stesse condizioni del teorema degli zeri.
 
 Come nel metodo delle successive bisezioni, non è possibile dimostrare formalmente la convergenza di questo metodo. Nonostante ciò, generalmente si dice che il metodo del Regula Falsi ha convergenza lineare.
 
 ### Metodo di Newton
 #### Descrizione del metodo
-Il metodo delle successive bisezioni è uno dei metodi più conosciuti per l'approssimazione degli zeri di funzione. L'idea alla base del metodo procede in questo modo.
+Il metodo di Newton è uno dei metodi più conosciuti per l'approssimazione degli zeri di funzione. L'idea alla base del metodo procede in questo modo.
 
 Sia $f: [a, b] \rightarrow R$ continua e derivabile in $[a, b]$ e sia $α \in [a, b]$ tale $f(α) = 0$. Data una stima $x^{(0)}$ di $α$, si utilizza la retta tangente a $f(x)$ in $x^{(0)}$ per approssimare $f(x)$. Si calcola quindi l'intersezione tra la retta tangente e l'asse delle ascisse per ottenere una nuova stima $x^{(1)}$ che sia migliore della precedente. Si continua nello stesso modo per ottenere le stime successive $x^{(2)}$, $x^{(3)}$, ..., che si avvicineranno man mano al valore di $α$.
 
@@ -112,7 +112,7 @@ In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza
 
 ![Immagine 19](Excalidraw/2025-03-23_18.03.18.excalidraw.svg)
 
-La convergenza di questo metodo è garantita, secondo la teoria dei metodi iterativi ad un passo, quando si ha che $|g'(α)| < 1$, dove $g(x)$ è la funzione iteratrice del metodo. Generalmente, il metodo delle corde ha convergenza lineare, però, scegliendo $m \approx f'(α)$ si può ottenere una convergenza anche quadratica o superiore.
+La convergenza di questo metodo è garantita, secondo la teoria dei metodi iterativi ad un passo, quando si ha che $|g'(α)| < 1$, dove $g(x)$ è la funzione iteratrice del metodo. Generalmente, il metodo delle corde ha convergenza lineare, però, se $α$ è zero semplice, scegliendo $m \approx f'(α)$ si può ottenere una convergenza anche quadratica o superiore.
 
 #### Metodo delle secanti
 In questo metodo si mantiene l'idea generale del metodo di Newton, la differenza è che, anziché utilizzare la retta tangente, si utilizza la retta passante per i due punti generati dalle iterazioni precedenti del metodo. Geometricamente, quindi, la retta tangente è sostituita dalla retta secante passante per i punti del grafico $(x^{(k - 1)}, f(x^{(k - 1)}))$ e $(x^{(k)}, f(x^{(k)}))$ e si trova l'intersezione tra questa secante e l'asse delle ascisse per trovare il punto $x^{(k + 1)}$. È quindi un metodo "a due passi", ovvero sono necessarie due iterazioni precedenti della funzione per calcolare la successiva. 
