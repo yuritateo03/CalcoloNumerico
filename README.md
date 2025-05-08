@@ -14,5 +14,5 @@
 
 ## 3. Spazi vettoriali e algebra lineare
 - **Lezione 11** - [Spazi vettoriali](Appunti/Lezione11.md)
-- **Lezione 12** - [Matrici e operazioni su di esse, sistemi lineari](Appunti/Lezione12.md)
+- **Lezione 12** - [Sistemi lineari](Appunti/Lezione12.md)
 - **Lezione 13** - [Sottospazi fondamentali dell'algebra lineare](Appunti/Lezione13.md)
