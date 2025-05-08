@@ -12,7 +12,7 @@
    - **Lezione 7** -  [Introduzione ai numeri di macchina](Appunti/Lezione7.md)
    - **Lezione 8 e 9** - [Proprietà dei numeri di macchina, arrotondamento e il suo effetto sull'aritmetica di macchina](Appunti/Lezione8_9.md)
 
-## 3. Algebra lineare
+## 3. Spazi vettoriali e algebra lineare
 - **Lezione 11** - [Spazi vettoriali](Appunti/Lezione11.md)
 - **Lezione 12** - [Matrici e operazioni su di esse, sistemi lineari](Appunti/Lezione12.md)
 - **Lezione 13** - [Sottospazi fondamentali dell'algebra lineare](Appunti/Lezione13.md)

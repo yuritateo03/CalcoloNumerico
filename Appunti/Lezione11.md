@@ -63,7 +63,7 @@ Tre vettori $v_1, v_2, v_3 \in V$ non nulli sono detti *complanari* se uno è co
 #### Sottospazi generati
 Siano $v_1, v_2, ... v_k \in V$. Allora l'insieme 
 
-$span\{v_1, v_2, ... v_k\} = \{v \in V : v = a_1v_1 + ... + a_kv_k$ per qualche scelta di $a_1, a_2, ..., a_k \in K\}$
+$span\{v_1, v_2, ... v_k\} = \{v \in V : v = a_1v_1 + ... + a_kv_k, a_1, a_2, ..., a_k \in K\}$
 
 è un sottospazio vettoriale di $V$ detto *sottospazio generato dai vettori* $v_1, v_2, ... v_k$, che ne sono detti i generatori. In sostanza, si tratta dell'insieme di tutti i vettori di $V$ che sono generati da una combinazione lineare di altri vettori di $V$.
 
@@ -93,7 +93,7 @@ Sia $W$ un sottospazio vettoriale di $V$. L'insieme di vettori $\{v_1, ..., v_p\
 1. $v_1, ..., v_p$ sono linearmente indipendenti
 2. $span\{v_1, ..., v_p\} = W$
 
-In questo caso, $p \in N$ è detta dimensione del sottospazio $W$ e scriveremo $dim(W) = p$. In questa definizione si assume che il sottospazio $W$ abbia dimensione finita. Non è sempre così, però. Ad esempio, prendiamo $P_{\infty}$ l'insieme dei polinomi di una variabile reale definito come $P_{\infty} = \{p(x) = a_nx^n + ... + a_1x + a_0$, con $a_i \in R$ e $n \in N\}$. Nessun insieme finito di polinomi potrà mai generare tutto $P_{\infty}$, dunque una qualsiasi base di $P_{\infty}$ dovrà essere costituita da un numero infinito di elementi.
+In questo caso, $p \in N$ è detta dimensione del sottospazio $W$ e scriveremo $dim(W) = p$. In questa definizione si assume che il sottospazio $W$ abbia dimensione finita. Non è sempre così, però. Ad esempio, prendiamo $P_{\infty}$ l'insieme dei polinomi di una variabile reale definito come $P_{\infty} = \{p(x) = a_nx^n + ... + a_1x + a_0, a_i \in R, n \in N\}$. Nessun insieme finito di polinomi potrà mai generare tutto $P_{\infty}$, dunque una qualsiasi base di $P_{\infty}$ dovrà essere costituita da un numero infinito di elementi.
 
 In ogni caso, in questo corso le basi finite sono il nostro principale caso di interesse,
 
