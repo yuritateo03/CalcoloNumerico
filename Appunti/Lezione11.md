@@ -7,7 +7,7 @@ Nota bene: con *leggi di composizione* si intendono un insieme di regole che per
 Ad esempio, l'addizione su $N$ ($+: N \times N \rightarrow N$) è una legge di composizione interna perché prende due numeri naturali e restituisce un altro numero naturale.
 
 Il prodotto tra uno scalare e un vettore ($⋅: R \times R^n \rightarrow R^n$), invece, è una legge di composizione esterna perché prende elementi da insiemi differenti (l'insieme dei numeri reali e l'insieme dei vettori di numeri reali) per restituire un vettore.
-#### Corpo
+### Corpo
 Un insieme $K$ dotato di leggi di composizione interne denotate con $+$ e $*$ (ovvero su questo insieme è possibile definire addizione e moltiplicazione) è detto *corpo* se valgono le seguenti proprietà:
 1. $x + y = y + x$, per ogni $x, y \in K$ (l'addizione gode della proprietà commutativa)
 2. Esiste $0 \in K$ tale che $x + 0 = x$ per ogni $x \in K$ (esiste elemento neutro per l'addizione)
@@ -17,7 +17,7 @@ Un insieme $K$ dotato di leggi di composizione interne denotate con $+$ e $*$ (o
 
 Affinché si possa definire un campo non è necessario che la moltiplicazione goda della proprietà commutativa, ma se dovesse avere anche quella proprietà allora si dice che $K$ è un *corpo commutativo* o *campo*. Ad esempio, gli insiemi $Z$, $Q$ e $R$ rispettano tutte queste proprietà e la moltiplicazione gode della proprietà commutativa, quindi sono campi. A seguito, a meno di indicazioni diverse, ci riferiremo al corpo $K = R$ (insieme dei numeri reali).
 
-#### Spazio vettoriale
+### Spazio vettoriale
 Un insieme $V$ dotato di leggi di composizione interna $+$ ed esterna $⋅: K \times V \rightarrow V$ è detto *spazio vettoriale sul corpo* $K$ se soddisfa le seguenti proprietà:
 1. $v + w = w + v$ e $α \cdot v = v \cdot α$ per ogni $α \in K$ e $v \in V$ (l'addizione tra vettori e la moltiplicazione tra uno scalare e un vettore godono della proprietà commutativa)
 2. Esiste $0 \in V$ tale che $v + 0 = v$ per ogni $v \in V$ (esiste elemento neutro per l'addizione tra vettori)
@@ -35,7 +35,7 @@ L'insieme $R^n$ delle $n$-uple ordinate di numeri reali
 
 è uno spazio vettoriale di $R$ ed è l'esempio più comune e utilizzato di spazio vettoriale.
 
-#### Sottospazio vettoriale
+### Sottospazio vettoriale
 Siano $V$ spazio vettoriale su $K$ e $W \subset V$. Diremo che $W$ è un *sottospazio vettoriale* di $V$ se
 1. $v + w \in W$ per ogni $v, w \in W$
 2. $αv \in W$ per ogni $a \in K$ e $v \in W$.
@@ -44,12 +44,12 @@ Affinché $W$ sia un sottospazio vettoriale di $V$, quindi, deve essere vero che
 
 Preso un vettore $V$, osserviamo che il vettore nullo (che indicheremo con $\{0\}$) e $V$ stesso sono sempre sottospazi di $V$. Il vettore nullo è detto *sottospazio banale* di $V$.
 
-#### Combinazione lineare
+### Combinazione lineare
 Siano $v_1, v_2, ... v_k \in V$ e $a_1, a_2, ..., a_k \in K$. Allora il vettore $a_1v_1 + ... + a_kv_k$ è detto *combinazione lineare* dei vettori $v_1, v_2, ... v_k$ e gli scalari $a_1, a_2, ..., a_k$ sono detti *coefficienti della combinazione lineare*.
 
 ![Immagine 2](Excalidraw/2025-05-08_15.07.57.excalidraw.svg)
 
-#### Vettori paralleli e complanari
+### Vettori paralleli e complanari
 Due vettori $v_1, v_2 \in V$ non nulli sono detti *paralleli* se uno è combinazione lineare dell'altro, ovvero se $v_2 = αv_1$ per qualche $α \in K$.
 
 ![Immagine 3](Excalidraw/2025-05-08_15.14.53.excalidraw.svg)
@@ -60,14 +60,14 @@ Tre vettori $v_1, v_2, v_3 \in V$ non nulli sono detti *complanari* se uno è co
 
 ![Immagine 4](Excalidraw/2025-05-08_15.30.50.excalidraw.svg)
 
-#### Sottospazi generati
+### Sottospazi generati
 Siano $v_1, v_2, ... v_k \in V$. Allora l'insieme 
 
 $span\{v_1, v_2, ... v_k\} = \{v \in V : v = a_1v_1 + ... + a_kv_k, a_1, a_2, ..., a_k \in K\}$
 
 è un sottospazio vettoriale di $V$ detto *sottospazio generato dai vettori* $v_1, v_2, ... v_k$, che ne sono detti i generatori. In sostanza, si tratta dell'insieme di tutti i vettori di $V$ che sono generati da una combinazione lineare di altri vettori di $V$.
 
-#### Vettori linearmente indipendenti
+### Vettori linearmente indipendenti
 Siano $v_1, v_2, ... v_k \in V$. Diremo che $v_1, v_2, ... v_k$ sono *linearmente indipendenti* se $a_1v_1 + ... + a_kv_k = 0 \implies α_1 = α_2 = ... = 0$. Se $v_1, v_2, ... v_k$ non sono linearmente indipendenti, allora i vettori si dicono *linearmente dipendenti*.
 
 Quindi, la definizione esprime il fatto che i vettori $v_1, v_2, ... v_k$ sono linearmente indipendenti tra loro se non esiste alcuna combinazione lineare nulla oltre a quella in cui tutti i coefficienti sono nulli. Questo tra l'altro implica che vettori linearmente indipendenti devono necessariamente essere non nulli.
