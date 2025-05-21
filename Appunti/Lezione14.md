@@ -25,7 +25,7 @@ Formalmente, diremo che $U = \{U_{ij}\}$ è a gradini se:
 Essenzialmente, una matrice si dice *a gradini* proprio perché compone una specie di "scala a gradini" di zeri.
 
 ### Pivot e colonne pivotali
-Se $U \in R^{m \times n}$ è a gradini, il primo elemento non nullo di ciascuna sua riga (da sinistra) è detto *pivot* oppure *elemento pivotale*. Formalmente, $U_{ij}$ è un pivot di $U$ se $U_{ij} \neq 0$ e $j = min$ {$k : U_{ik} \neq 0$ }.
+Se $U \in R^{m \times n}$ è a gradini, il primo elemento non nullo di ciascuna sua riga (da sinistra) è detto *pivot* oppure *elemento pivotale*. Formalmente, $U_{ij}$ è un pivot di $U$ se $U_{ij} \neq 0$ e $j = min$ { $k : U_{ik} \neq 0$ }.
 
 ![Immagine 1](Excalidraw/2025-05-21_19.53.54.excalidraw.svg)
 
@@ -67,5 +67,7 @@ Sia $A \in R^{m \times n}$. Descriviamo sinteticamente una strategia per calcola
 2. Considerato il sistema lineare $Ux = 0$, spostare a destra del segno di uguaglianza le incognite associate alle colonne non pivotali di $U$ (le chiameremo *incognite non pivotali*) mediante *sostituzione all'indietro*, cioè risolvendo le equazioni dall'ultima "a salire" fino alla prima
 3. Descrivere l'insieme delle soluzioni di $Ux = 0$ come parametrizzazione di $ker(U)$ ed estrarne una base per $ker(A) = ker(U)$
 4. Ottenere una base per $Im(A)$ considerandone le colonne corrispondenti alle colonne pivotali di $U$.
+
+Nella lezione successiva vedremo un esempio pratico per questo esercizio.
 ### [Lezione successiva](Lezione15.md)
 ### [Torna all'indice](../README.md)
