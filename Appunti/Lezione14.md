@@ -19,13 +19,13 @@ Sia $U \in R^{m \times n}$. Informalmente, diremo che $U$ è *in forma a gradini
 - Se una riga di $U$ è nulla, lo sono anche tutte le righe successive.
 
 Formalmente, diremo che $U = \{U_{ij}\}$ è a gradini se:
-- Per ogni riga non nulla $i \geq 2$ di $U$, si ha $min\{j : U_{ij} \neq 0\} > min\{j : U_{i-1, j} \neq 0\}$
+- Per ogni riga non nulla $i \geq 2$ di $U$, si ha $min${$j : U_{ij} \neq 0$} $> min${$j : U_{i-1, j} \neq 0$}
 - Se esiste $i = 1, ..., n$ tale che $U_{ij} = 0$ per ogni $j$, allora $U_{kj} = 0$ per ogni $k \geq i$ e per ogni $j$
 
 Essenzialmente, una matrice si dice *a gradini* proprio perché compone una specie di "scala a gradini" di zeri.
 
 ### Pivot e colonne pivotali
-Se $U \in R^{m \times n}$ è a gradini, il primo elemento non nullo di ciascuna sua riga (da sinistra) è detto *pivot* oppure *elemento pivotale*. Formalmente, $U_{ij}$ è un pivot di $U$ se $U_{ij} \neq 0$ e $j = min\{k : U_{ik} \neq 0\}$.
+Se $U \in R^{m \times n}$ è a gradini, il primo elemento non nullo di ciascuna sua riga (da sinistra) è detto *pivot* oppure *elemento pivotale*. Formalmente, $U_{ij}$ è un pivot di $U$ se $U_{ij} \neq 0$ e $j = min${$k : U_{ik} \neq 0$}.
 
 ![Immagine 1](Excalidraw/2025-05-21_19.53.54.excalidraw.svg)
 
@@ -55,11 +55,11 @@ Per ogni matrice $A$, si ha che $rank(A) =$ *numero di righe linearmente indipen
 ### Parametrizzazione
 Ricordiamo che, se $v_1, ..., v_p$ è base per un sottospazio vettoriale $W$ di $V$, allora ogni elemento $v \in W$ può essere espresso in un unico modo come combinazione lineare dei $V_i$, ovvero $v = α_1v_1 + ... + α_pv_p$. In tal caso, l'espressione
 
-$W = \{v \in V : v = α_1v_1 + ... + α_pv_p | α_1, ..., α_p \in R\}$
+$W =$ {$v \in V : v = α_1v_1 + ... + α_pv_p | α_1, ..., α_p \in R$}
 
 si dice *parametrizzazione del sottospazio* $W$, e gli $α_i$ ne sono detti *parametri*.
 
-Se è possibile descrivere un sottospazio come nella relazione di sopra, e i vettori $v_1, ..., v_p$ sono linearmente indipendenti, allora è possibile dimostrare che $\{v_1, ..., v_p\}$ è una base per $W$ e l'espressione $v = α_1v_1 + ... + α_pv_p$ è una parametrizzazione di $W$. È quindi possibile ottenere una base per uno spazio vettoriale a partire da una sua parametrizzazione costituita da vettori linearmente indipendenti. Questo fatto si può usare per costruire basi per il nucleo di una matrice.
+Se è possibile descrivere un sottospazio come nella relazione di sopra, e i vettori $v_1, ..., v_p$ sono linearmente indipendenti, allora è possibile dimostrare che {$v_1, ..., v_p$} è una base per $W$ e l'espressione $v = α_1v_1 + ... + α_pv_p$ è una parametrizzazione di $W$. È quindi possibile ottenere una base per uno spazio vettoriale a partire da una sua parametrizzazione costituita da vettori linearmente indipendenti. Questo fatto si può usare per costruire basi per il nucleo di una matrice.
 
 ### Calcolare una base per nucleo e immagine di una matrice
 Sia $A \in R^{m \times n}$. Descriviamo sinteticamente una strategia per calcolare una base per $ker(A)$ e $Im(A)$.
