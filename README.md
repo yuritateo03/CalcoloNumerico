@@ -16,3 +16,6 @@
 - **Lezione 11** - [Spazi vettoriali](Appunti/Lezione11.md)
 - **Lezione 12** - [Sistemi lineari](Appunti/Lezione12.md)
 - **Lezione 13** - [Sottospazi fondamentali dell'algebra lineare](Appunti/Lezione13.md)
+- **Lezione 14** - [Operazioni elementari, forma a gradini, calcolo di rango, base, nucleo e immagine di una matrice](Appunti/Lezione14.md)
+- **Lezione 15** - [Teorema di Rouché-Capelli, eliminazione di Gauss](Appunti/Lezione15.md)
+- **Lezione 16** - [Fattorizzazione LU](Appunti/Lezione16.md)
