@@ -74,4 +74,5 @@ Si può enunciare questo teorema anche dicendo che *la pre-moltiplicazione per u
 ![Immagine 4](Excalidraw/2025-05-10_18.37.17.excalidraw.svg)
 
 Mentre tutte le altre implicazioni sono vere per la definizione di $ker(A)$.
+### [Lezione successiva](Lezione14.md)
 ### [Torna all'indice](../README.md)
