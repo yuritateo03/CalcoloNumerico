@@ -51,6 +51,8 @@ Possiamo fare alcune osservazioni:
 - Sotto la diagonale, gli elementi del prodotto $M_1^{-1} M_2^{-1}$ hanno lo stesso valore dei corrispondenti non nulli dei singoli fattori. Lungo e sopra la diagonale, invece, il prodotto $M_1^{-1} M_2^{-1}$ coincide con i fattori $M_1^{-1}$ e $M_2^{-1}$.
 Queste osservazioni non sono accidentali ma generali, e sono conseguenze della struttura speciale delle matrici $M_1^{-1}$ e $M_2^{-1}$.
 
+Più avanti nella lezione vedremo come calcolare a tutti gli effetti le matrici $M_1, M_2, ..., M_{n-1}, U$ a partire da qualunque matrice $A \in R^{n \times n}$.
+
 ### Matrici triangolari speciali
 Una matrice triangolare è detta *speciale* se tutti i suoi elementi diagonali sono uguali a $1$.
 
@@ -71,8 +73,8 @@ In parole povere, una matrice elementare è una matrice che ha $1$ come tutti el
 
 Ho omesso di rappresentare elementi nulli per rapidità. Vediamo adesso un teorema che mostra che l'inversa di una matrice elementare e il prodotto tra matrici elementari (purché siano effettuati nel giusto ordine) godono di proprietà speciali. Per di più, possono essere ottenuti sostanzialmente senza effettuare calcoli. Sono essenzialmente una formalizzazione delle osservazioni che abbiamo fatto nell'esempio della fattorizzazione $LU$.
 #### Teorema
-1. Sia $M_k$ elementare. Allora essa è invertibile e si ha che $(M_k^{-1})_{ij} = -(M_k)_{ij}$ per ogni $i > j$ (l'inversa di una matrice elementare è uguale alla matrice elementare stessa con gli elementi sotto la diagonale cambiati di segno)
-2. Siano $M_{k1}, ..., M_{kp} \in R^{n \times n}$ elementari con $k_1 < ... < k_p$. Allora il prodotto è una matrice triangolare superiore e si ha $(M_{k1} ... M_{kp})_{ij} = (M_{k1} + ... + M_{kp})_{ij}$ per ogni $i > j$ (il prodotto di matrici elementari in ordine è uguale a una matrice composta da tutte le colonne eccezione delle matrici elementari di partenza)
+1. Sia $M_k$ elementare. Allora essa è invertibile e si ha che $.(M_k^{-1})_{ij} = -(M_k)_{ij}.$ per ogni $i > j$ (l'inversa di una matrice elementare è uguale alla matrice elementare stessa con gli elementi sotto la diagonale cambiati di segno)
+2. Siano $M_{k1}, ..., M_{kp} \in R^{n \times n}$ elementari con $k_1 < ... < k_p$. Allora il prodotto è una matrice triangolare superiore e si ha $.(M_{k1} ... M_{kp})_{ij} = (M_{k1} + ... + M_{kp})_{ij}.$ per ogni $i > j$ (il prodotto di matrici elementari in ordine è uguale a una matrice composta da tutte le colonne eccezione delle matrici elementari di partenza)
 #### Esempio
 Riprendiamo le matrici elementari che abbiamo usato come esempio precedentemente:
 
@@ -151,5 +153,5 @@ Dal procedimento che abbiamo appena descritto notiamo che:
 2. Come conseguenza delle proprietà delle matrici elementari e della costruzione delle matrici $M_1, M_2, ..., M_{n - 1}$, la matrice $L = M_1^{-1}M_2^{-1}...M_{n-1}^{-1}$ della fattorizzazione $LU$ è costituita, al di sotto della diagonale, dai moltiplicatori
    ![Immagine 20](Excalidraw/2025-05-24_00.00.13.excalidraw.svg)
    
-   Dove i moltiplicatori $M_{i, j}$ sono i coefficienti delle varie operazioni elementari invertiti di segno. Questa è una semplificazione che permette di calcolare direttamente $L$ negli esercizi in cui è richiesta solo la fattorizzazione $LU$ e non il calcolo delle matrici $M_1, M_2, ..., M_{n - 1}$.
+   Dove i moltiplicatori $m_{i, j}$ sono i coefficienti delle varie operazioni elementari invertiti di segno. Questa è una semplificazione che permette di calcolare direttamente $L$ negli esercizi in cui è richiesta solo la fattorizzazione $LU$ e non il calcolo delle matrici $M_1, M_2, ..., M_{n - 1}$.
 ### [Torna all'indice](../README.md)
