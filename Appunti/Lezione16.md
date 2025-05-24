@@ -73,8 +73,8 @@ In parole povere, una matrice elementare è una matrice che ha $1$ come tutti el
 
 Ho omesso di rappresentare elementi nulli per rapidità. Vediamo adesso un teorema che mostra che l'inversa di una matrice elementare e il prodotto tra matrici elementari (purché siano effettuati nel giusto ordine) godono di proprietà speciali. Per di più, possono essere ottenuti sostanzialmente senza effettuare calcoli. Sono essenzialmente una formalizzazione delle osservazioni che abbiamo fatto nell'esempio della fattorizzazione $LU$.
 #### Teorema
-1. Sia $M_k$ elementare. Allora essa è invertibile e si ha che ${(M_k^{-1})}_{ij} = -{(M_k)}_{ij}$ per ogni $i > j$ (l'inversa di una matrice elementare è uguale alla matrice elementare stessa con gli elementi sotto la diagonale cambiati di segno)
-2. Siano $M_{k1}, ..., M_{kp} \in R^{n \times n}$ elementari con $k_1 < ... < k_p$. Allora il prodotto è una matrice triangolare superiore e si ha ${(M_{k1} ... M_{kp})}_{ij} = {(M_{k1} + ... + M_{kp})}_{ij}$ per ogni $i > j$ (il prodotto di matrici elementari in ordine è uguale a una matrice composta da tutte le colonne eccezione delle matrici elementari di partenza)
+1. Sia $M_k$ elementare. Allora essa è invertibile e si ha che $(M_k^{-1})_{ij} = -(M_k)_{ij}$ per ogni $i > j$ (l'inversa di una matrice elementare è uguale alla matrice elementare stessa con gli elementi sotto la diagonale cambiati di segno)
+2. Siano $M_{k1}, ..., M_{kp} \in R^{n \times n}$ elementari con $k_1 < ... < k_p$. Allora il prodotto è una matrice triangolare superiore e si ha $(M_{k1} ... M_{kp})_{ij} = (M_{k1} + ... + M_{kp})_{ij}$ per ogni $i > j$ (il prodotto di matrici elementari in ordine è uguale a una matrice composta da tutte le colonne eccezione delle matrici elementari di partenza)
 #### Esempio
 Riprendiamo le matrici elementari che abbiamo usato come esempio precedentemente:
 
