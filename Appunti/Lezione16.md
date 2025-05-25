@@ -154,4 +154,5 @@ Dal procedimento che abbiamo appena descritto notiamo che:
    ![Immagine 20](Excalidraw/2025-05-24_00.00.13.excalidraw.svg)
    
    Dove i moltiplicatori $m_{i, j}$ sono i coefficienti delle varie operazioni elementari invertiti di segno. Questa è una semplificazione che permette di calcolare direttamente $L$ negli esercizi in cui è richiesta solo la fattorizzazione $LU$ e non il calcolo delle matrici $M_1, M_2, ..., M_{n - 1}$.
+### [Lezione successiva](Lezione17.md)
 ### [Torna all'indice](../README.md)
