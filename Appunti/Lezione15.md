@@ -119,5 +119,41 @@ Generalizziamo adesso la strategia al caso di un sistema di $n$ equazioni in $n$
 	   eliminare, qualora possibile, l'incognita $x_k$ dalle equazioni $Eq(k+1), ..., Eqn$ sommando a queste un opportuno multiplo di $Eqk$
 	Fine
 2. Risolvere, nell'ordine, $Eqn$, $Eq(n-1)$, ..., $Eq1$ per sostituzione all'indietro.
+
+## Extra: Domande di teoria del foglio 15
+### Esercizio 4
+Rispondere VERO o FALSO alle seguenti affermazioni:
+1. Un sistema lineare avente più incognite che equazioni ammette sempre almeno una soluzione.
+2. Un sistema lineare avente più equazioni che incognite non ammette mai soluzione.
+3. Se un sistema lineare avente più incognite che equazioni ammette almeno una soluzione, allora ne ammette infinite.
+
+L'affermazione ```1``` è FALSA. Lo dimostriamo con un esempio di sistema lineare avente più incognite che equazioni ma che non ammette soluzioni.
+
+![Immagine 16](Excalidraw/2025-05-25_16.57.18.excalidraw.svg)
+
+L'affermazione ```2``` è FALSA. Lo dimostriamo con un esempio di sistema lineare avente più equazioni che soluzioni ma che ammette soluzioni.
+
+![Immagine 17](Excalidraw/2025-05-25_16.58.53.excalidraw.svg)
+
+L'affermazione ```3``` è VERA. Sia $Ax = b$ un sistema lineare con $A \in R^{m \times n}$ e $b \in R^m$, con $m < n$ (ovvero ci sono più incognite che equazioni) e assumiamo che il sistema abbia almeno una soluzione. Siccome il sistema ammette soluzione, allora si ha che $rank(A) = rank([A, b]) \leq min$ { $n, m$ } per il teorema di Rouché-Capelli. Inoltre, sappiamo che $m < n$ per ipotesi, di conseguenza $rank(A) = rank([A, b]) < n$. Quindi, per il teorema di Rouché-Capelli, il sistema ammette infinite soluzioni, nello specifico ammette $\infty^{n - rank(A)}$ soluzioni.
+
+### Esercizio 6
+1. Può un sistema lineare $Ax = b$ con matrice dei coefficienti $3 \times 4$ ammettere unica soluzione per un'opportuna scelta di $b$?
+2. Può un sistema lineare $Ax = b$ con matrice dei coefficienti $4 \times 3$ ammettere soluzione per ogni scelta di $b$?
+3. Sia $A \in R^{5 \times 12}$ e supponiamo che esista un vettore $b$ tale che $Ax = b$ ammetta $\infty^{8}$ soluzioni. Qual è il rango di $A$?
+4. Ricordiamo che una matrice $A \in R^{m \times n}$ si dice *skinny* se $m > n$. Giustificare o confutare la seguente affermazione: "Se un sistema lineare $Ax = b$ ammette unica soluzione per una particolare scelta del vettore $b$, allora $A$ è quadrata o skinny".
+5. Ricordiamo che una matrice $A \in R^{m \times n}$ si dice *fat* se $m < n$. Giustificare o confutare la seguente affermazione: "Se un sistema lineare $Ax = b$ ammette infinite soluzioni per una particolare scelta del vettore $b$, allora $A$ è fat".
+
+La risposta alla domanda ```1``` è NO. Se la matrice dei coefficienti è $3 \times 4$, questo significa che ci sono più incognite che equazioni. Di conseguenza, come abbiamo dimostrato nell'esercizio precedente con il teorema di Rouché-Capelli, non può avere unica soluzione ma deve averne per forza infinite.
+
+La risposta alla domanda ```2``` è NO. Per avere una soluzione per ogni $b \in R^4$, la matrice dovrebbe avere rango pieno ed essere in grado di generare tutto $R^4$, ma questo non è possibile. Siccome la matrice dei coefficienti è $4 \times 3$, il rango potrà essere al più $3$, quindi non potrà mai coprire tutto $R^4$.
+
+La risposta alla domanda ```3``` è $rank(A) = 4$. Questo perché, per il teorema di Rouché-Capelli, abbiamo che $\infty^{n - rank(A)}$, quindi, siccome il sistema lineare ha $\infty^{8}$ soluzioni, allora $8 = n - rank(A) \implies 8 = 12 - rank(A)$, di conseguenza $rank(A) = 4$.
+
+L'affermazione nella domanda ```4``` è VERA. Questo perché, per il teorema di Rouché-Capelli, un sistema lineare $Ax = b$ ha un'unica soluzione se e solo se $rank(A) = rank([A, b]) = n$. Sappiamo inoltre che $rank(A) \leq min${ $n, m$ }, quindi deve essere per forza vero che $n \leq m$, ovvero $A$ è quadrata o skinny.
+
+L'affermazione nella domanda ```5``` è FALSA. Anche un sistema lineare $Ax = b$, dove $A$ è una matrice quadrata, può ammettere infinite soluzioni. Ad esempio:
+
+![Immagine 18](Excalidraw/2025-05-25_17.58.25.excalidraw.svg)
 ### [Lezione successiva](Lezione16.md)
 ### [Torna all'indice](../README.md)
