@@ -20,3 +20,4 @@
 - **Lezione 15** - [Teorema di Rouché-Capelli, eliminazione di Gauss](Appunti/Lezione15.md)
 - **Lezione 16** - [Fattorizzazione LU](Appunti/Lezione16.md)
 - **Lezione 17** - [Algoritmo della fattorizzazione LU, pivot nulli o quasi nulli](Appunti/Lezione17.md)
+- **Lezione 18** - [Fattorizzazione LU con pivoting parziale](Appunti/Lezione18.md)

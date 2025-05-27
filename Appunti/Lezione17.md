@@ -29,4 +29,5 @@ Eseguendo l'algoritmo in *MATLAB*, però, l'algoritmo si arresterebbe o restitui
 I pivot nulli sono il motivo per cui nell'algoritmo c'è il controllo ```if A(k, k) == 0 interrompi l'esecuzione```, ma questo controllo non è sufficiente a causa dei pivot quasi nulli.
 
 Abbiamo visto che lo scambio di equazioni può essere un utile strumento per rimediare al problema dei pivot nulli, per cui nella prossima lezione vedremo come possiamo interpretarlo come un'operazione elementare. Inoltre, introdurremo una modifica all'algoritmo della fattorizzazione $LU$ per renderlo più stabile, specialmente nei casi che abbiamo menzionato sopra.
+### [Lezione successiva](Lezione18.md)
 ### [Torna all'indice](../README.md)
