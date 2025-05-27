@@ -1,5 +1,5 @@
 # Fattorizzazione LU con pivoting parziale
-### [Lezione precedente](Lezione16.md)
+### [Lezione precedente](Lezione17.md)
 
 Abbiamo visto come i pivot nulli o pivot molto vicini a $0$ possono causare problemi nel calcolo della fattorizzazione $LU$. Abbiamo visto come lo scambio tra righe può essere una valida strategia per ovviare al problema, per cui oggi lavoreremo su questo.
 
@@ -90,5 +90,4 @@ Il determinante si calcola ancora come nella fattorizzazione $LU$ senza pivoting
 
 ### Esercizio 1
 ![Immagine 8](Excalidraw/2025-05-27_15.23.59.excalidraw.svg)
-
 ### [Torna all'indice](../README.md)
