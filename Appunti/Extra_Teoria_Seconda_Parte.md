@@ -24,6 +24,7 @@ Dunque $V$ è un sottospazio vettoriale. Come detto prima, ogni polinomio $p(x) 
 
 #### Svolgimento
 ![Immagine 2](Excalidraw/2025-06-05_14.59.00.excalidraw.svg)
+
 Abbiamo isolato $α_1, α_2$ scrivendoli come espressioni in termini di $x_1, x_2$. Questo dimostra che ogni vettore $x_1, x_2$ si può scrivere in modo unico come combinazione lineare di quei due vettori, quindi è dimostrato che compongono una base per $R^2$.
 
 ### Foglio 14, esercizio 3
