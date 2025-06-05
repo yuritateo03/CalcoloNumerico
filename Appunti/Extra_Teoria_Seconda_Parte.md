@@ -103,7 +103,7 @@ L'affermazione nella domanda ```5``` è FALSA. Anche un sistema lineare $Ax = b$
 ### Foglio 17, esercizio 3
 ![Immagine 9](Excalidraw/17_3.png)
 
-### Svolgimento
+#### Svolgimento
 ![Immagine 10](Excalidraw/2025-06-05_15.58.08.excalidraw.svg)
 Notiamo che il prodotto $AX$ ha come risultato la matrice identità, il che significa che $A$ e $X$ sono inverse tra loro.
 
