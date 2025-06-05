@@ -1,3 +1,4 @@
+# Extra: Domande di teoria prese dai fogli 11-20
 ### Foglio 11, esercizio 2
 Dimostrare che l'insieme dei polinomi $p \in P_4$ tali che $p(x) = p(-x)$ è un sottospazio vettoriale di $P_4$ e esibirne un insieme di generatori.
 #### Svolgimento
@@ -27,6 +28,7 @@ Abbiamo isolato $α_1, α_2$ scrivendoli come espressioni in termini di $x_1, x_
 
 ### Foglio 14, esercizio 3
 Mostrare che il seguente sistema ammette solo soluzione banale.
+
 ![Immagine 3](Excalidraw/2025-06-05_15.05.21.excalidraw.svg)
 
 #### Svolgimento
