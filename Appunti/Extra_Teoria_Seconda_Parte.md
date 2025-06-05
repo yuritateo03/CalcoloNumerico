@@ -118,3 +118,4 @@ Sappiamo che $Ax_1 = e1$, $Ax_2 = e_2$ e $Ax_3 = e_3$. Notiamo anche che $b \in 
 $A(x_1 + 2x_2 + 3x_3) = Ax_1 + 2Ax_2 + 3Ax_3 = e_1 + 2e_2 + 3e_3 = b$
 
 Quindi $x = x_1 + 2x_2 + 3x_3$ è soluzione del sistema $Ax = b$. Più generalmente, quando abbiamo una matrice invertibile $A \in R^{n \times n}$ e $x_1, x_2, ..., x_n$ tali che $Ax_i = e_i$, dove $e_i$ è l'elemento $i$-esimo della base canonica di $R^n$, allora possiamo prendere qualunque vettore $b \in R^n$, scriverlo come combinazione lineare $b = b_1e_1 + b_2e_2 + ... + b_ne_n$ e si avrà che la soluzione del sistema lineare $Ax = b$ sarà $x = b_1x_1 + b_2x_2 + ... + b_nx_n$.
+### [Torna all'indice](../README.md)
