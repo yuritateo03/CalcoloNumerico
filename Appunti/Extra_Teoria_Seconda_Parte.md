@@ -128,9 +128,10 @@ Dato che $A^2x = b$, possiamo scrivere $A^2x = AAx = b$. Ponendo poi $Ax = y$, p
 Possiamo procedere con la risoluzione del sistema $LUy = b$ seguendo i due step:
 1. Risolvere $Lz = b$
 2. Risolvere $Uy = z$
+
 Fatto questo, si può procedere con la risoluzione del sistema $LUx = y$ seguendo i due step:
-3. Risolvere $Lw = y$
-4. Risolvere $Ux = w$
+1. Risolvere $Lw = y$
+2. Risolvere $Ux = w$
 E il vettore $x$ sarà il vettore soluzione del sistema lineare $A^2x = b$. 
 
 A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^2x = b$ in $2n^2$ operazioni elementari.
@@ -161,9 +162,10 @@ Dato che $PA = LU$, possiamo scrivere $A = P^{-1}LU$. Poiché $P$ è una matrice
 A questo punto, procediamo con il primo step, ovvero la risoluzione di $A^Ty = b$. Sappiamo che $A^T = U^T L^T P$, quindi dobbiamo risolvere $U^T L^T Py = b$ in questi step:
 1. Risolvere $L^Tz = P^Tb$
 2. Risolvere $U^Ty = z$
+
 Successivamente, possiamo risolvere il sistema lineare $Ax = y$, utilizzando la fattorizzazione $PA = LU$, in questi step:
-3. Risolvere $Lw = Py$
-4. Risolvere $Ux = w$
+1. Risolvere $Lw = Py$
+2. Risolvere $Ux = w$
 
 A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $PA = LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^TAx = b$ in $2n^2$ operazioni elementari (oltre a quelle necessarie per calcolare matrici trasposte e moltiplicarle tra loro).
 ### [Torna all'indice](../README.md)
