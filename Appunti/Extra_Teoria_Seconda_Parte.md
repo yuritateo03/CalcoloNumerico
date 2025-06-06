@@ -113,9 +113,57 @@ Data una matrice $R^{n \times n}$, possiamo quindi calcolarne l'inversa mediante
 
 Osserviamo che quella combinazione lineare è uguale al vettore soluzione che abbiamo ricavato. Si può giustificare in questo modo.
 
-Sappiamo che $Ax_1 = e1$, $Ax_2 = e_2$ e $Ax_3 = e_3$. Notiamo anche che $b \in R^3$, quindi possiamo scriverlo come combinazione lineare della base canonica di $R^3$, ovvero $b = e_1 + 2e_2 + 3e_3$. Adesso moltiplichiamo $A$ per la combinazione lineare richiesta e otteniamo:
+Sappiamo che $Ax_1 = e_1$, $Ax_2 = e_2$ e $Ax_3 = e_3$. Notiamo anche che $b \in R^3$, quindi possiamo scriverlo come combinazione lineare della base canonica di $R^3$, ovvero $b = e_1 + 2e_2 + 3e_3$. Adesso moltiplichiamo $A$ per la combinazione lineare richiesta e otteniamo:
 
 $A(x_1 + 2x_2 + 3x_3) = Ax_1 + 2Ax_2 + 3Ax_3 = e_1 + 2e_2 + 3e_3 = b$
 
 Quindi $x = x_1 + 2x_2 + 3x_3$ è soluzione del sistema $Ax = b$. Più generalmente, quando abbiamo una matrice invertibile $A \in R^{n \times n}$ e $x_1, x_2, ..., x_n$ tali che $Ax_i = e_i$, dove $e_i$ è l'elemento $i$-esimo della base canonica di $R^n$, allora possiamo prendere qualunque vettore $b \in R^n$, scriverlo come combinazione lineare $b = b_1e_1 + b_2e_2 + ... + b_ne_n$ e si avrà che la soluzione del sistema lineare $Ax = b$ sarà $x = b_1x_1 + b_2x_2 + ... + b_nx_n$.
+
+### Foglio 18, esercizio 6
+Sia $A \in R^{n \times n}$ una matrice reale, di cui si conosce la fattorizzazione $A = LU$. Proporre una procedura computazionalmente efficiente per risolvere il sistema lineare $A^2x = b$ e analizzarne il costo in termini di operazioni algebriche elementari.
+
+#### Svolgimento
+Dato che $A^2x = b$, possiamo scrivere $A^2x = AAx = b$. Ponendo poi $Ax = y$, possiamo impostare il sistema come $Ax = y$ e $Ay = b$. Dato inoltre che $A = LU$, possiamo riscrivere il sistema come $LUx = y$ e $LUy = b$.
+
+Possiamo procedere con la risoluzione del sistema $LUy = b$ seguendo i due step:
+1. Risolvere $Lz = b$
+2. Risolvere $Uy = z$
+Fatto questo, si può procedere con la risoluzione del sistema $LUx = y$ seguendo i due step:
+3. Risolvere $Lw = y$
+4. Risolvere $Ux = w$
+E il vettore $x$ sarà il vettore soluzione del sistema lineare $A^2x = b$. 
+
+A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^2x = b$ in $2n^2$ operazioni elementari.
+
+### Esonero 22 dicembre 2017, esercizio 1.5 (per il foglio 19)
+Calcolare il numero di condizionamento di $A$ in norma $||\cdot||_1$.
+
+*Nota bene: questa richiesta viene assegnata come ultimo punto di un unico problema. I punti precedenti chiedono sempre di calcolare la fattorizzazione* $PA = LU$ *e la matrice* $A^{-1}$, *per cui fornirò almeno quest'ultima visto che serve per l'esercizio, ma in sede d'esame andrà probabilmente calcolata in un punto precedente. Vedere nello specifico lo svolgimento dell'esercizio 3 del foglio 17 poco sopra in questa pagina.*
+
+![Immagine 12](Excalidraw/2025-06-06_23.52.28.excalidraw.svg)
+
+#### Svolgimento
+La norma $||\cdot||_1$ si calcola effettuando la somma dei numeri in valore assoluto (ad esempio la colonna $[-3, 0, 4]$ darà $|-3| + |0| + |4| = 7$) sulle colonne della matrice e prendendo il massimo. La formula per calcolare il fattore di condizionamento di $A$ è $K(A) = ||A||_1 \cdot ||A^{-1}||_1$, quindi procediamo calcolando la norma per le due matrici in questo modo:
+
+![Immagine 13](Excalidraw/2025-06-06_23.40.44.excalidraw.svg)
+
+Di conseguenza, $||A||_1 = 8$ e $||A^{-1}||_1 = 29$, di conseguenza $K(A) = 8 \cdot 29 = 232$.
+### Foglio 20, esercizio 5
+Sia $A \in R^{n \times n}$ una matrice reale, di cui si conosce la fattorizzazione $PA = LU$. Proporre una procedura efficiente per risolvere il sistema lineare $A^TAx = b$. Studiare il costo in termini di numero di operazioni algebriche elementari.
+
+#### Svolgimento
+Prendiamo il sistema $A^TAx = b$. Possiamo porre $Ax = y \implies A^Ty = b$, quindi possiamo risolvere il sistema in due fasi:
+1. Risolvere $A^Ty = b$
+2. Risolvere $Ax = y$
+
+Dato che $PA = LU$, possiamo scrivere $A = P^{-1}LU$. Poiché $P$ è una matrice di scambio, allora $P^{-1} = P^T$, quindi possiamo scrivere $A = P^TLU$. Da questo deriva che $A^T = (P^TLU)^T = U^T L^T P$.
+
+A questo punto, procediamo con il primo step, ovvero la risoluzione di $A^Ty = b$. Sappiamo che $A^T = U^T L^T P$, quindi dobbiamo risolvere $U^T L^T Py = b$ in questi step:
+1. Risolvere $L^Tz = P^Tb$
+2. Risolvere $U^Ty = z$
+Successivamente, possiamo risolvere il sistema lineare $Ax = y$, utilizzando la fattorizzazione $PA = LU$, in questi step:
+3. Risolvere $Lw = Py$
+4. Risolvere $Ux = w$
+
+A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $PA = LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^TAx = b$ in $2n^2$ operazioni elementari (oltre a quelle necessarie per calcolare matrici trasposte e moltiplicarle tra loro).
 ### [Torna all'indice](../README.md)
