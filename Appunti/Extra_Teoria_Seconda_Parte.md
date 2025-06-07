@@ -119,8 +119,8 @@ $A(x_1 + 2x_2 + 3x_3) = Ax_1 + 2Ax_2 + 3Ax_3 = e_1 + 2e_2 + 3e_3 = b$
 
 Quindi $x = x_1 + 2x_2 + 3x_3$ è soluzione del sistema $Ax = b$. Più generalmente, quando abbiamo una matrice invertibile $A \in R^{n \times n}$ e $x_1, x_2, ..., x_n$ tali che $Ax_i = e_i$, dove $e_i$ è l'elemento $i$-esimo della base canonica di $R^n$, allora possiamo prendere qualunque vettore $b \in R^n$, scriverlo come combinazione lineare $b = b_1e_1 + b_2e_2 + ... + b_ne_n$ e si avrà che la soluzione del sistema lineare $Ax = b$ sarà $x = b_1x_1 + b_2x_2 + ... + b_nx_n$.
 
-### Foglio 18, esercizio 6
-Sia $A \in R^{n \times n}$ una matrice reale, di cui si conosce la fattorizzazione $A = LU$. Proporre una procedura computazionalmente efficiente per risolvere il sistema lineare $A^2x = b$ e analizzarne il costo in termini di operazioni algebriche elementari.
+### Foglio 18, esercizio 6/Esonero 20 dicembre 2018, esercizio bonus
+Sia $A \in R^{n \times n}$ una matrice reale e invertibile, di cui si conosce la fattorizzazione $A = LU$. Proporre una procedura computazionalmente efficiente per risolvere il sistema lineare $A^2x = b$ e analizzarne il costo in termini di operazioni algebriche elementari.
 
 #### Svolgimento
 Dato che $A^2x = b$, possiamo scrivere $A^2x = AAx = b$. Ponendo poi $Ax = y$, possiamo impostare il sistema come $Ax = y$ e $Ay = b$. Dato inoltre che $A = LU$, possiamo riscrivere il sistema come $LUx = y$ e $LUy = b$.
@@ -135,6 +135,8 @@ Fatto questo, si può procedere con la risoluzione del sistema $LUx = y$ seguend
 E il vettore $x$ sarà il vettore soluzione del sistema lineare $A^2x = b$. 
 
 A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^2x = b$ in $2n^2$ operazioni elementari.
+
+È una procedura più efficiente rispetto al calcolo diretto di $A^2$ e della sua fattorizzazione $LU$, in quanto il calcolo di $A^2$ è una moltiplicazione tra matrici che in genere richiede $2n^3$ operazioni elementari, $\frac{2}{3}n^3$ operazioni elementari per il calcolo della fattorizzazione e per le ultime $n^2$ operazioni elementari per la risoluzione del sistema $LUx = y$.
 
 ### Esonero 22 dicembre 2017, esercizio 1.5 (per il foglio 19)
 Calcolare il numero di condizionamento di $A$ in norma $||\cdot||_1$.
@@ -168,4 +170,50 @@ Successivamente, possiamo risolvere il sistema lineare $Ax = y$, utilizzando la 
 2. Risolvere $Ux = w$
 
 A livello computazionale, ogni sistema $Ax = b$, dove $A$ è una matrice di cui si conosce la fattorizzazione $PA = LU$, può essere risolto con un costo di circa $n^2$ operazioni elementari (una procedura di sostituzione in avanti e una all'indietro). Questo significa che, con il procedimento proposto sopra, possiamo risolvere il sistema lineare $A^TAx = b$ in $2n^2$ operazioni elementari (oltre a quelle necessarie per calcolare matrici trasposte e moltiplicarle tra loro).
+
+### Esonero 22 dicembre 2021, esercizio 3
+![Immagine 14](Excalidraw/22_12_21_3.png)
+
+**Nota bene: ricordiamo che due vettori sono perpendicolari quando il loro prodotto è nullo.**
+
+#### Svolgimento
+Per verificare che $V^⊥$ è un sottospazio vettoriale, dobbiamo verificare le due proprietà di chiusura e l'appartenenza dello $0$. Per definizione di vettori perpendicolari, ricordiamo che $V^⊥ =$ { $x \in R^n | x \cdot v_i = 0, 0 \leq i \leq p$ }. Procediamo con la verifica delle proprietà:
+1. Siano $x, y \in V^⊥$. Si ha che $(x + y) \cdot v_i = x \cdot v_i + y \cdot v_i = 0 + 0 = 0 \implies x + y \in V^⊥$
+2. Siano $x \in V^⊥$ e $α \in R$. Si ha che $(αx) \cdot v_i = α(x \cdot v_i) = α \cdot 0 = 0 \implies αx \in V^⊥$
+3. $0 \cdot v_i = 0 \implies 0 \in V^⊥$
+Quindi $V^⊥$ è un sottospazio vettoriale di $R^n$.
+
+Per ottenere una base per $V^⊥$, definiamo la matrice $A = [v_1 v_2 ... v_p] \in R^{n \times p}$ e prendiamo la sua trasposta $A^T \in R^{p \times n}$. Facendo questo, possiamo riscrivere la definizione di $V^⊥$ come $V^⊥ =$ { $x \in R^n | A^Tx = 0$ }, siccome gli elementi di $V^⊥$ dovranno annullare le righe di $A^T$, essendo vettori perpendicolari. Ma questo significa che $V^⊥$ non è altro che $ker(A^T)$, quindi basterà risolvere il sistema $A^Tx = 0$ per ricavare una base che di $ker(A^T)$ (tra l'altro, dimostrando che $V^⊥ = ker(A^T)$ si dimostra immediatamente che $V^⊥$ è un sottospazio vettoriale di $R^n$ siccome $ker(A^T)$ lo è).
+
+Per calcolare la dimensione di $V^⊥$, ricordiamo che i vettori $v_1, ..., v_p$ sono linearmente indipendenti. Questo significa che $rank(A) = rank(A^T) = p$. Da qui possiamo procedere ricordando che $dim(ker(A^T)) + ker(A^T) = n$, di conseguenza $dim(ker(A^T)) = dim(V^⊥) = n - rank(A^T) = n - p$.
+
+### Esonero 22 dicembre 2021, esercizio 4
+Dimostrare che $A$ ammette un'infinita di fattorizzazioni $A = LU$ distinte.
+
+![Immagine 15](Excalidraw/2025-06-07_15.53.03.excalidraw.svg)
+
+#### Svolgimento
+Procediamo con il calcolo della fattorizzazione $LU$, notando che al secondo step arriveremo con la seconda colonna già totalmente azzerata. Questo implica che possiamo eseguire qualunque operazione elementare e la fattorizzazione sarebbe comunque valida.
+
+![Immagine 16](Excalidraw/2025-06-07_15.54.38.excalidraw.svg)
+
+Ci potremmo già fermare alla seconda matrice, ottenendo una delle possibili fattorizzazioni (ovvero quella con $α = 0$), però per dimostrare che abbiamo potenzialmente fattorizzazioni $LU$ infinite, basate sul parametro $α$, dobbiamo trovarci in una situazione in cui scegliamo un pivot in una colonna che è già totalmente nulla. Questo ci permette di applicare qualunque operazione elementare di somma tra righe (in questo caso è rappresentato da $R_3 - αR_2$), introducendo così $α$ come parametro sia in $L$ che in $U$, mostrando quindi che ci sono fattorizzazioni $LU$ infinite sulla base del parametro $α$.
+
+Teoricamente parlando, una matrice $A$ ammette infinite fattorizzazioni $LU$ se ha almeno due righe linearmente dipendenti tra loro, ovvero non è singolare o non ha rango pieno.
+
+### Esonero 18 gennaio 2021, esercizio 2.5
+Costruire un esempio di matrice $2 \times 3$ con nucleo banale, oppure spiegare perché una tale matrice non può esistere.
+
+#### Svolgimento
+Sia $A \in R^{2 \times 3}$. Sappiamo che $rank(A) \leq min$ { $m, n$ } $= min$ { $2, 3$ } $= 2$. Sappiamo inoltre che $rank(A) + dim(ker(A)) = n = 3$. Questo vuol dire che, al massimo, $dim(ker(A)) = n - rank(A) = 3 - 2 = 1 > 0$, di conseguenza $A$ non potrà mai avere nucleo banale.
+
+### Esonero 20 dicembre 2018, esercizio 2.5
+*Nota bene: spiegherò solo il procedimento generico della parte dedicata al calcolo del residuo*
+
+Considerati i seguenti punti ... effettuarne la regressione lineare (ovvero, calcolare l'equazione della retta $y = mx + q$ di miglior approssimazione per i dati nel senso dei minimi quadrati) e calcolare la norma euclidea del residuo.
+
+#### Svolgimento
+Il residuo è definito come $||A\overline x - b||$, dove $\overline x$ è la soluzione calcolata nel senso dei minimi quadrati del problema precedente (nel caso di un esercizio di regressione lineare, $\overline x = [m, q]$). La norma da utilizzare viene fornita dall'esercizio, in questo viene richiesto di utilizzare la norma euclidea o norma $2$ (è generalmente la più usata per il calcolo del residuo, almeno quella che lui chiede più spesso).
+
+Bisogna quindi calcolare $A\overline x$ (si può fare anche impostando i valori di $\overline x$ nel sistema originale) e sottrarre $b$ elemento per elemento. Si otterrà un vettore di dimensioni uguali a quelle di $b$ e bisognerà poi calcolare la norma di quel vettore. Nel caso della norma euclidea, bisognerà sommare tra loro i quadrati degli elementi del vettore e prendere la radice quadrata di quella somma. Il risultato ottenuto sarà il valore del residuo.
 ### [Torna all'indice](../README.md)
