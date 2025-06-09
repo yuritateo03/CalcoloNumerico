@@ -23,5 +23,5 @@
 - **Lezione 18** - [Fattorizzazione LU con pivoting parziale](Appunti/Lezione18.md)
 - **Extra** - [Domande di teoria dei fogli dall'11 al 20](Appunti/Extra_Teoria_Seconda_Parte.md)
 
-# 4. Esercizi MATLAB
+## 4. Esercizi MATLAB
 - **Cartella con esercizi** - [Raccolta di esercizi MATLAB](Appunti/MATLAB)
