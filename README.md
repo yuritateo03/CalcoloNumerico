@@ -22,3 +22,6 @@
 - **Lezione 17** - [Algoritmo della fattorizzazione LU, pivot nulli o quasi nulli](Appunti/Lezione17.md)
 - **Lezione 18** - [Fattorizzazione LU con pivoting parziale](Appunti/Lezione18.md)
 - **Extra** - [Domande di teoria dei fogli dall'11 al 20](Appunti/Extra_Teoria_Seconda_Parte.md)
+
+# 4. Esercizi MATLAB
+- [Raccolta di esercizi MATLAB](Appunti/MATLAB)
